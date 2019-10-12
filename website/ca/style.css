@@ -324,6 +324,7 @@ p {
 -------------------------- */
 
 .header_area {
+    background-image: url(img/bg-img/welcome-bg.png);
     left: 0;
     position: absolute;
     width: 100%;
@@ -335,7 +336,7 @@ p {
 .menu_area .navbar-brand {
     font-size: 72px;
     font-weight: 700;
-    color: #fff;
+    /*color: #fff;*/
     margin: 0;
     line-height: 1;
     padding: 0;
@@ -344,7 +345,7 @@ p {
 
 .menu_area .navbar-brand:hover,
 .menu_area .navbar-brand:focus {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 
@@ -354,7 +355,7 @@ p {
 }
 
 .menu_area #nav .nav-link {
-    color: #fff;
+    /*color: #fff;*/
     display: block;
     font-size: 16px;
     font-weight: 500;
