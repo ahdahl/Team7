@@ -20,6 +20,8 @@
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
 
+    <script type="text/javascript" src="js/compass.js"></script>
+
 </head>
 
 <body>
@@ -63,7 +65,45 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
+    <div id="poster" class="mask poster" onclick="hideModal('poster')">
+                <div class="modal">
+                    <h1 class="modalheader">POSTER &amp; PITCH</h1><a href="files/posterPoster.pdf" class="modallink" target="_blank">Poster</a><a href="files/posterPitchSlide.pdf" class="modallink" target="_blank">Pitch Slide</a></div>
+    </div>
+    <div id="hifi" class="mask hifi" onclick="hideModal('hifi')">
+        <div class="modal">
+            <h1 class="modalheader">HI-FI PROTOTYPE</h1><a href="files/Spiel.ipa" class="modallink" target="_blank">Download IPA</a><a href="files/hifiREADME.pdf" class="modallink" target="_blank">README</a><a href="files/hifiMidwayMilestone.pptx" target="_blank" class="modallink label">Midway Milestone</a><a href="files/hifiFinalReport.pdf" class="modallink presentation" target="_blank">Final Report</a></div>
+    </div>
+    <div id="heuristic" class="mask heuristic" onclick="hideModal('heuristic')">
+        <div class="modal">
+            <h1 class="modalheader">HEURISTIC EVALUATION</h1>
+            <a href="files/heuristicHeuristicEvaluation.pdf" class="modallink" target="_blank">Heuristic Evaluation</a>
+        </div>
+    </div>
+    <div id="lofi" class="mask lowfi" onclick="hideModal('lofi')">
+        <div class="modal">
+            <h1 class="modalheader">LOW-FI PROTOTYPE</h1>
+            <div class="label">Presentation:</div><a href="files/lowfiPresentation.pdf" class="modallink presentation" target="_blank">PDF</a><a href="files/lowfiPresentation.pptx" class="modallink presentation" target="_blank">PPT</a><a href="files/lowfiTestingScript.pdf" class="modallink" target="_blank">Prototype Testing Script</a><a href="files/lowfiReport.pdf" class="modallink" target="_blank">Written Report with Prototype</a></div>
+    </div>
+    <div id="concept" class="mask conceptvideo" onclick="hideModal('concept')">
+        <div class="modal">
+            <h1 class="modalheader">CONCEPT VIDEO</h1>
+            <div class="label concept">Presentation/Storyboards:</div><a href="files/videoPresentation.pdf" class="modallink presentation" target="_blank">PDF</a><a href="files/videoPresentation.pptx" class="modallink presentation right" target="_blank">PPT</a><a href="https://youtu.be/AY6K525GSe4" class="modallink" target="_blank">Watch the Video</a></div>
+    </div>
+    <div id="pov" class="mask pov" onclick="hideModal('pov')">
+        <div class="modal">
+            <h1 class="modalheader">POV &amp; EXPERIENCE PROTOTYPES</h1>
+            <div class="label">Presentation:</div><a href="files/povPresentation.pdf" class="modallink presentation" target="_blank">PDF</a><a href="files/povPresentation.pptx" class="modallink presentation right" target="_blank">PPT</a><a href="files/povReport.pdf" class="modallink" target="_blank">Written Report</a><a href="files/povPOVHMW.pdf" class="modallink" target="_blank">List of POV's and HMW's</a></div>
+    </div>
+    <div id="needfinding" class="mask needfinding" onclick="hideModal('needfinding')">
+        <div class="modal">
+            <h1 class="modalheader">NEEDFINDING</h1>
+            <div class="label">Presentation:</div><a href="files/needfindingPresentation.pdf" class="modallink presentation" target="_blank">PDF</a><a href="files/needfindingPresentation.pptx" class="modallink presentation right" target="_blank">PowerPoint</a><a href="files/needfindingEmpathyMap.pdf" class="modallink" target="_blank">Empathy Map List</a><a href="files/needfindingInterviewQuestions.pdf" class="modallink" target="_blank">Interview Questions</a></div>
+    </div>
+    <div id="medium-fi" class="mask mediumfi" onclick="hideModal('medium-fi')">
+        <div class="modal">
+            <h1 class="modalheader">MEDIUM-FI PROTOTYPE</h1>
+            <div class="label">Presentation:</div><a href="files/mediumfiPresentation.pdf" class="modallink presentation" target="_blank">PDF</a><a href="files/mediumfiPresentation.pptx" class="modallink presentation right">PowerPoint</a><a href="https://www.figma.com/proto/dX6KFQCQ7pgE8HajiAL57X/Compass-Med-fi-Prototype?node-id=129%3A2&scaling=min-zoom" class="modallink" target="_blank">Prototype on Figma</a><a href="files/mediumfiREADME.pdf" class="modallink" target="_blank">README</a></div>
+    </div>
 
         <!-- ***** Awesome Features Start ***** -->
     <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
@@ -81,7 +121,7 @@
 
                 <div class="row">
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem" onclick="modal('needfinding')">
                         <div class="single-feature">
                             <i class="ti-user" aria-hidden="true"></i>
                             <h5>Needfinding</h5>
@@ -89,7 +129,7 @@
                         </div>
                     </div>
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem" onclick="modal('pov')">
                         <div class="single-feature">
                             <i class="ti-pulse" aria-hidden="true"></i>
                             <h5>POVS and Experience Prototypes</h5>
@@ -97,7 +137,7 @@
                         </div>
                     </div>
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem" onclick="modal('concept')">
                         <div class="single-feature">
                             <i class="ti-dashboard" aria-hidden="true"></i>
                             <h5>Concept Video</h5>
@@ -105,7 +145,7 @@
                         </div>
                     </div>
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem" onclick="modal('lofi')">
                         <div class="single-feature">
                             <i class="ti-palette" aria-hidden="true"></i>
                             <h5>Low-fi Prototyping and Pilot Usability Testing</h5>
@@ -113,7 +153,7 @@
                         </div>
                     </div>
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem" onclick="modal('medium-fi')">
                         <div class="single-feature">
                             <i class="ti-crown" aria-hidden="true"></i>
                             <h5>Interactive Medium-fi Prototype</h5>
@@ -121,7 +161,7 @@
                         </div>
                     </div>
                     <!-- Single Feature Start -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-4 processitem">
                         <div class="single-feature">
                             <i class="ti-headphone" aria-hidden="true"></i>
                             <h5>Heuristic Evaluation</h5>
