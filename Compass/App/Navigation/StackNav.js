@@ -1,4 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
+import { Metrics, Colors, Images } from '../Themes';
 
 import * as screens from '../Screens';
 
@@ -8,7 +9,7 @@ const StackNav = createStackNavigator({
   }, {
     initialRouteName: 'HomeScreen',
     // Created custom header in each screen instead
-    headerMode: 'none',
+    headerMode: 'float',
     // Set background color
     cardStyle: { backgroundColor: 'white' },
 });

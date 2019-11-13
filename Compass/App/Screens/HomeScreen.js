@@ -18,9 +18,13 @@ export default class HomeScreen extends React.Component {
 		loading: false,
 	}
 
-
-	//_keyExtractor = (index) => JSON.stringify(index);
-
+	static navigationOptions = {
+		title: 'Home',
+		headerStyle: {
+			backgroundColor: Colors.salmon,
+		  },
+		  headerTintColor: Colors.white,	  
+	  };	
 
 	renderListEmptyComponent = () => {
 		return (
@@ -36,12 +40,7 @@ export default class HomeScreen extends React.Component {
 
 		return (
 			<SafeAreaView style={styles.container}>
-
-				<View style={styles.homeHeader}>
-					<Image source={Images.CompassLogo} style={styles.CompassLogo} />
-					<Text style={styles.title}>Home</Text>
-				</View>
-
+				
 			</SafeAreaView>
 		)
 	}
