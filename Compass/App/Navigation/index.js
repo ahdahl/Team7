@@ -1,7 +1,5 @@
-import StackNav from './StackNav';
-import TabNav from './TabNav';
+import AppNav from './AppNav';
 
 export {
-    StackNav,
-    TabNav
+    AppNav,
 }

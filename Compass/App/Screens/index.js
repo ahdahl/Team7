@@ -1,7 +1,7 @@
 import HomeScreen from './HomeScreen';
-import ProfileScreen from './ProfileScreen';
+import MailScreen from './MailScreen';
 
 export {
   HomeScreen,
-  ProfileScreen
+  MailScreen
 }

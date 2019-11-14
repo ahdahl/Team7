@@ -11,7 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { Metrics, Colors } from '../Themes';
 
-export default class ProfileScreen extends React.Component {
+export default class MailScreen extends React.Component {
 	
 
 	renderInfo() {

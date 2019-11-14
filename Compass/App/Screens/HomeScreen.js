@@ -9,7 +9,6 @@ import {
 	TouchableOpacity
 } from 'react-native';
 
-import { SpaceshipListItem } from '../Components';
 import { Metrics, Colors, Images } from '../Themes';
 
 export default class HomeScreen extends React.Component {
@@ -26,21 +25,11 @@ export default class HomeScreen extends React.Component {
 		  headerTintColor: Colors.white,	  
 	  };	
 
-	renderListEmptyComponent = () => {
-		return (
-			<View style={{ flex: 1, }}>
-				<Text style={{ textAlign: 'center', color: 'blue' }}>
-					Nothing loaded! :(
-				</Text>
-			</View>
-		)
-	}
 
 	render() {
 
 		return (
 			<SafeAreaView style={styles.container}>
-				
 			</SafeAreaView>
 		)
 	}
