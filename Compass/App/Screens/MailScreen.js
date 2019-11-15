@@ -11,8 +11,15 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { Metrics, Colors } from '../Themes';
 
-export default class ProfileScreen extends React.Component {
+export default class MailScreen extends React.Component {
 	
+	static navigationOptions = {
+		title: 'Mail',
+		headerStyle: {
+			backgroundColor: Colors.salmon,
+		  },
+		  headerTintColor: Colors.white,	  
+	  };	
 
 	renderInfo() {
 		const { info } = this.props.navigation.state.params;

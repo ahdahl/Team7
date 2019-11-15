@@ -11,29 +11,18 @@ import {
 
 import { Metrics, Colors, Images } from '../Themes';
 
-import { Ionicons } from '@expo/vector-icons';
-
-export default class HomeScreen extends React.Component {
+export default class CommunityScreen extends React.Component {
 
 	state = {
 		loading: false,
 	}
 
 	static navigationOptions = {
-		title: 'Home',
+		title: 'Community',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		  },
-		  headerTintColor: Colors.white,
-		headerRight: (
-			<SafeAreaView style = {{padding: 16}}>
-				<Ionicons
-					name="md-settings"
-					size={42}
-					color={Colors.white}
-				/>
-			</SafeAreaView>
-			),
+		  headerTintColor: Colors.white,	  
 	  };	
 
 
@@ -72,6 +61,10 @@ const styles = StyleSheet.create({
 		fontSize: 30,
 		lineHeight: 32,
 		color: Colors.white
+	},
+	loadingText: {
+		fontSize: 40,
+		color: '#fff'
 	},
 	h1: {
 		fontWeight: 'bold',

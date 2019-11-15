@@ -1,7 +1,11 @@
 import HomeScreen from './HomeScreen';
-import ProfileScreen from './ProfileScreen';
+import MailScreen from './MailScreen';
+import CommunityScreen from './CommunityScreen';
+import SearchScreen from './SearchScreen';
 
 export {
   HomeScreen,
-  ProfileScreen
+  MailScreen,
+  CommunityScreen,
+  SearchScreen,
 }
