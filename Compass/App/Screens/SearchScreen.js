@@ -13,14 +13,14 @@ import { Metrics, Colors, Images } from '../Themes';
 
 import { Ionicons } from '@expo/vector-icons';
 
-export default class HomeScreen extends React.Component {
+export default class SearchScreen extends React.Component {
 
 	state = {
 		loading: false,
 	}
 
 	static navigationOptions = {
-		title: 'Home',
+		title: 'Search',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		  },
@@ -72,6 +72,10 @@ const styles = StyleSheet.create({
 		fontSize: 30,
 		lineHeight: 32,
 		color: Colors.white
+	},
+	loadingText: {
+		fontSize: 40,
+		color: '#fff'
 	},
 	h1: {
 		fontWeight: 'bold',
