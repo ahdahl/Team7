@@ -13,7 +13,7 @@ const metrics = {
   marginVertical: 10,
   padding: 10,
   marginBottom: 25,
-  defaultFont: 'Roboto',
+  defaultFont: 'lato-regular',
 }
 
 export default metrics

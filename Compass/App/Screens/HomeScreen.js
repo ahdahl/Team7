@@ -23,8 +23,12 @@ export default class HomeScreen extends React.Component {
 		title: 'Home',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
-		  },
-		  headerTintColor: Colors.white,
+		},
+		headerTitleStyle: {
+			fontFamily: 'lato-regular',
+			fontWeight: '300'	//loads default font without this
+        },
+		headerTintColor: Colors.white,
 		headerRight: (
 			<SafeAreaView style = {{padding: 16}}>
 				<Ionicons

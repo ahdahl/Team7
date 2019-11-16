@@ -5,8 +5,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Metrics, Colors, Images } from '../Themes';
 import {Image} from 'react-native';
 
-
-// import { Entypo } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 import * as screens from '../Screens';
 
@@ -61,7 +60,7 @@ HomeStack.navigationOptions = ({ navigation }) => {
     tabBarIcon: () => (
       <Image
         source={Images.HomeIcon}
-        style = {{width: '100%', height: '100%', tintColor: Colors.white}}
+        style = {{width: '80%', height: '80%', tintColor: Colors.white}}
         resizeMode = {'contain'}
       />
     ),
@@ -74,7 +73,7 @@ MailStack.navigationOptions = ({ navigation }) => {
     tabBarIcon: () => (
       <Image
         source={Images.MailIcon}
-        style = {{width: '100%', height: '100%', tintColor: Colors.white}}
+        style = {{width: '80%', height: '80%', tintColor: Colors.white}}
         resizeMode = {'contain'}
       />
     )
@@ -84,22 +83,26 @@ MailStack.navigationOptions = ({ navigation }) => {
 CommunityStack.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: 'Community',
-    // tabBarIcon: ({ tintColor }) => (
-    //   <Entypo name="mail"
-    //     size={Metrics.icons.medium}
-    //     color={tintColor} />
-    // ),
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={Images.GroupIcon}
+        style = {{width: '80%', height: '80%', tintColor: Colors.white}}
+        resizeMode = {'contain'}
+      />
+    ),
   };
 };
 
 SearchStack.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: 'Search',
-    // tabBarIcon: ({ tintColor }) => (
-    //   <Entypo name="mail"
-    //     size={Metrics.icons.medium}
-    //     color={tintColor} />
-    // ),
+    tabBarIcon: ({ tintColor }) => (
+      <FontAwesome
+        name="search"
+        size={36}
+        color={Colors.white}
+      />
+    ),
   };
 };
 
@@ -120,6 +123,7 @@ const TabNav = createBottomTabNavigator({
     style: {
       height: 75,
       backgroundColor: Colors.salmon,
+      fontFamily: 'lato-regular',
     }
   },
 });
