@@ -1,52 +1,50 @@
 import React from 'react';
 import {
 	StyleSheet,
-	View,
 	SafeAreaView,
+	View,
 	Text,
-	TouchableOpacity,
-	FlatList
+	Image,
+	FlatList,
+	TouchableOpacity
 } from 'react-native';
+
+import { Metrics, Colors, Images } from '../Themes';
+
 import { Ionicons } from '@expo/vector-icons';
 
-import { Metrics, Colors } from '../Themes';
-
 export default class MailScreen extends React.Component {
-	
+
+	state = {
+		loading: false,
+	}
+
 	static navigationOptions = {
 		title: 'Mail',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
-		  },
-		  headerTintColor: Colors.white,	  
+		},
+		headerTitleStyle: {
+			fontFamily: 'lato-regular',
+			fontWeight: '300'	//loads default font without this
+        },
+		headerTintColor: Colors.white,
+		headerRight: (
+			<SafeAreaView style = {{padding: 16}}>
+				<Ionicons
+					name="ios-settings"
+					size={42}
+					color={Colors.white}
+				/>
+			</SafeAreaView>
+			),
 	  };	
-
-	renderInfo() {
-		const { info } = this.props.navigation.state.params;
-
-	}
 
 
 	render() {
-		const { info } = this.props.navigation.state.params;
 
 		return (
 			<SafeAreaView style={styles.container}>
-
-				{/* Back Navigation */}
-				<TouchableOpacity
-					style={styles.header}
-					onPress={() => this.props.navigation.goBack()}>
-						<Ionicons
-							name='ios-arrow-back'
-							color='#fff'
-							size={30}
-						/>
-				</TouchableOpacity>
-
-				<Text style={styles.title}>{info.name}</Text>
-
-				{this.renderInfo()}
 			</SafeAreaView>
 		)
 	}
@@ -55,14 +53,36 @@ export default class MailScreen extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		margin: Metrics.padding,
+		margin: 10,
+	},
+	homeHeader: {
+		width: Metrics.maxComponentWidth,
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: Colors.salmon,
+		marginBottom: Metrics.marginBottom
+	},
+	CompassLogo: {
+		width: 122,
+		height: 66,
+		marginRight: Metrics.marginHorizontal
 	},
 	title: {
+		height: 66,
 		textTransform: 'uppercase',
 		fontWeight: 'bold',
 		fontStyle: 'italic',
-		fontSize: 35,
 		fontFamily: Metrics.defaultFont,
-		color: Colors.yellow,
+		fontSize: 30,
+		lineHeight: 32,
+		color: Colors.white
 	},
+	loadingText: {
+		fontSize: 40,
+		color: '#fff'
+	},
+	h1: {
+		fontWeight: 'bold',
+		color: '#fff',
+	}
 })

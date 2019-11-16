@@ -11,6 +11,8 @@ import {
 
 import { Metrics, Colors, Images } from '../Themes';
 
+import { Ionicons } from '@expo/vector-icons';
+
 export default class CommunityScreen extends React.Component {
 
 	state = {
@@ -21,8 +23,21 @@ export default class CommunityScreen extends React.Component {
 		title: 'Community',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
-		  },
-		  headerTintColor: Colors.white,	  
+		},
+		headerTitleStyle: {
+			fontFamily: 'lato-regular',
+			fontWeight: '300'	//loads default font without this
+        },
+		headerTintColor: Colors.white,
+		headerRight: (
+			<SafeAreaView style = {{padding: 16}}>
+				<Ionicons
+					name="ios-settings"
+					size={42}
+					color={Colors.white}
+				/>
+			</SafeAreaView>
+			),
 	  };	
 
 

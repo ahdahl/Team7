@@ -37,7 +37,7 @@ const CommunityStack = createStackNavigator({
   Community: { screen: screens.CommunityScreen },
   Search: { screen: screens.SearchScreen },
 }, {
-  initialRouteName: 'Mail',
+  initialRouteName: 'Community',
   headerMode: 'float',
   cardStyle: { backgroundColor: Colors.white },
 });

@@ -32,7 +32,7 @@ export default class SearchScreen extends React.Component {
 		headerRight: (
 			<SafeAreaView style = {{padding: 16}}>
 				<Ionicons
-					name="md-settings"
+					name="ios-settings"
 					size={42}
 					color={Colors.white}
 				/>
