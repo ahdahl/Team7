@@ -11,11 +11,13 @@ import {
 
 import { Metrics, Colors, Images } from '../Themes';
 
+import { SearchBar } from 'react-native-elements'
 import { Ionicons } from '@expo/vector-icons';
 
 export default class MailScreen extends React.Component {
 
 	state = {
+		search: '',
 		loading: false,
 	}
 
@@ -37,9 +39,10 @@ export default class MailScreen extends React.Component {
 					color={Colors.white}
 				/>
 			</SafeAreaView>
-			),
-	  };	
+		),
+	};	
 
+	
 
 	render() {
 

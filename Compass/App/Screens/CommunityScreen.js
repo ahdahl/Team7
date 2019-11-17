@@ -37,8 +37,8 @@ export default class CommunityScreen extends React.Component {
 					color={Colors.white}
 				/>
 			</SafeAreaView>
-			),
-	  };	
+		),
+	};	
 
 
 	render() {

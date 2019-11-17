@@ -124,6 +124,9 @@ const TabNav = createBottomTabNavigator({
       height: 75,
       backgroundColor: Colors.salmon,
       fontFamily: 'lato-regular',
+    },
+    labelStyle: {
+      fontSize: 18
     }
   },
 });
