@@ -1,7 +1,8 @@
 import React from 'react';
 import {AppNav} from './App/Navigation';
-import {HomeScreen} from './App/Screens';
+import {LoginScreen} from './App/Screens';
 import * as Font from 'expo-font';
+import firebase from 'firebase';
 
 import { AppLoading } from 'expo';
 
@@ -11,8 +12,7 @@ export default class App extends React.Component {
     
     this.state = {
       fontsLoaded: false,
-      //loggedIn: false,
-      loggedIn: true,
+      loggedIn: false,
       unsubscribe: null
     }
   }
@@ -25,31 +25,30 @@ export default class App extends React.Component {
     this.setState({ fontsLoaded: true });
   }
 
-  // // Check out this link to learn more about firebase.auth()
-  // // https://firebase.google.com/docs/reference/node/firebase.auth.Auth
-  // componentDidMount() {
-  //   // This auto detects whether or not a user is signed in.
-  //   let unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-  //     if (user) {
-  //       this.setState({ loggedIn: true });
-  //     } else {
-  //       this.setState({ loggedIn: false });
-  //     }
-  //   });
 
-  //   this.setState({ unsubscribe });
-  // }
+  componentDidMount() {
+    // auto detects whether or not user is signed in.
+    let unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ loggedIn: true });
+      } else {
+        this.setState({ loggedIn: false });
+      }
+    });
 
-  // componentWillUnmount() {
-  //   this.state.unsubscribe();
-  // }
+    this.setState({ unsubscribe });
+  }
+
+  componentWillUnmount() {
+    this.state.unsubscribe();
+  }
 
   render() {
     if (this.state.fontsLoaded) {
       if (this.state.loggedIn) {
         return <AppNav />;
       } else {
-        //return <LoginScreen />;
+        return <LoginScreen />;
       }  
     } else {
       return <AppLoading />;
