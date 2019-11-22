@@ -8,6 +8,8 @@ const images = {
     HomeIcon: require('../Images/Icons/home-icon.png'),
     MailIcon: require('../Images/Icons/mail-icon.png'),
     GroupIcon: require('../Images/Icons/group-icon.png'),
+
+    FeaturedAndrea: require('../Images/Profiles/featured-andrea.png'),
 }
 
 export default images

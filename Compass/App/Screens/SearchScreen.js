@@ -15,7 +15,32 @@ import { SearchBar } from 'react-native-elements'
 
 import { Ionicons, Feather, AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
-import { bold } from 'ansi-colors';
+import { bold, underline } from 'ansi-colors';
+
+
+const DATA = [
+	{
+	  id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+	  name: 'First Item',
+	},
+	{
+	  id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+	  name: 'Second Item',
+	},
+	{
+	  id: '58694a0f-3da1-471f-bd96-145571e29d72',
+	  name: 'Third Item',
+	},
+  ];
+
+  function Item({ name }) {
+	return (
+	  <View style={styles.item}>
+		<Text style={styles.name}>{name}</Text>
+	  </View>
+	);
+  }
+
 
 export default class SearchScreen extends React.Component {
 
@@ -56,7 +81,8 @@ export default class SearchScreen extends React.Component {
 					placeholder='Type here...'
 					onChangeText={this.updateSearch}
 					value={search}
-					lightTheme
+					containerStyle={{backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray}}				
+					inputContainerStyle={{backgroundColor: Colors.white}}
 				/>
 
 				<View style={styles.buttonRowContainer}>
@@ -86,11 +112,47 @@ export default class SearchScreen extends React.Component {
 					</View>
 				</View>
 
-				<Text style={styles.featuredTimelinesText}>Featured Timelines</Text>
+				<Text style={styles.featuredTimelinesText}>Featured Timeline</Text>
 
-				<FlatList style={{horizontal: true}}>
+				{/* Uncomment the 2 TouchablOpacity lines once you add Andrea's timeline screen */}
+				{/* <TouchableOpacity onPress={() => navigation.navigate("AndreaScreen")}> */}
+					<Image
+						source={Images.FeaturedAndrea}
+						style = {{width: '60%', height: '60%', alignSelf: 'center'}}
+					/>
+                {/* </TouchableOpacity> */}
 
-				</FlatList>
+
+
+				{/* <View style={styles.item}>
+					<View style={{flexDirection:'row'}}>
+						<Image
+							source={Images.Donovan}
+							style = {{width: '30%', height: '30%'}}
+						/>
+						<View style={{alignItems: 'center'}}>
+							<Text style={styles.name}>Donovan Tokuyama</Text>
+							<View style={styles.connectButton}>
+								<Text style={{color: Colors.white}}>Connect</Text>
+							</View>
+						</View>
+					</View>
+					<Text
+						style={{color: Colors.white, fontSize: 24, textDecorationLine: 'underline'}}>
+						Compass cofounder
+					</Text>
+					<Text
+						style={{color: Colors.white, fontSize: 10}}>
+						Dropped out of college to perfect a social media plaform with the goal of helping highschool students pursuing non-traditional paths, allowing...
+					</Text>
+	  			</View>
+
+
+				<FlatList>
+					data={DATA}
+					renderItem={({ item }) => <Item name={item.name} />}
+					keyExtractor={item => item.id}
+				</FlatList> */}
 
 			</SafeAreaView>
 
@@ -142,5 +204,21 @@ const styles = StyleSheet.create({
 		color: Colors.blue,
 		fontSize: 18,
 		fontWeight: 'bold',
+	},
+	item: {
+		backgroundColor: Colors.gray,
+		padding: 20,
+		marginVertical: 8,
+		marginHorizontal: 16,
+	  },
+	name: {
+		color: Colors.white,
+		fontSize: 28,
+		fontWeight: 'bold',
+	},
+	connectButton: {
+		backgroundColor: Colors.salmon,
+		borderRadius: 8,
+		paddingHorizontal: 36,
 	}
 })
