@@ -6,7 +6,8 @@ import {
 	Text,
 	Image,
 	FlatList,
-	TouchableOpacity
+	TouchableOpacity,
+	ScrollView
 } from 'react-native';
 
 import { Metrics, Colors, Images } from '../Themes';
@@ -46,6 +47,9 @@ export default class HomeScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 			</SafeAreaView>
+
+			<ScrollView style={{ flex: 1, backgroundColor: '#fff' }}>
+                    <SearchBox />
 		)
 	}
 }
