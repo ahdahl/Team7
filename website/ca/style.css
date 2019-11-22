@@ -514,6 +514,7 @@ p {
 -------------------------- */
 
 .wellcome_area {
+    background-image: url(img/bg-img/bg-img-01.jpg)
     background-color: #FF727C;
     height: 700px;
     position: relative;
