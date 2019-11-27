@@ -45,7 +45,8 @@ export default class HomeScreen extends React.Component {
 
 		return (
 			<SafeAreaView style={styles.container}>
-			</SafeAreaView>
+			</SafeAreaView>			
+
 		)
 	}
 }

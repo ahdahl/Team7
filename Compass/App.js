@@ -12,7 +12,8 @@ export default class App extends React.Component {
     
     this.state = {
       fontsLoaded: false,
-      loggedIn: false,
+      // loggedIn: false,
+      loggedIn: true,
       unsubscribe: null
     }
   }
@@ -20,6 +21,7 @@ export default class App extends React.Component {
   async componentWillMount(){
     await Font.loadAsync({
       'lato-regular': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Regular.ttf'),
+      'lato-medium': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Medium.ttf'),
     });
 
     this.setState({ fontsLoaded: true });
