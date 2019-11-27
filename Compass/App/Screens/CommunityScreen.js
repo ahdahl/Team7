@@ -74,41 +74,55 @@ export default class CommunityScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 
-				<View style = {{flex:10, flexDirection: 'row', justifyContent: 'space-evenly'}}>
-					<Image
-						source={Images.TyProfilePic}
-						style = {styles.profilePicStyle}
-					/>
-					<Image
+				<View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly'}}>
+					<View style={{flex: 1}}>
+						<Image
+							source={Images.TyProfilePic}
+							style = {styles.profilePicStyle}
+						/>
+					</View>
+					<View style={{flex: 1}}>
+						<Image
 						source={Images.DonovanProfilePic}
 						style = {styles.profilePicStyle}
-					/>
-					<Image
+						/>
+					</View>
+					<View style={{flex: 1}}>
+						<Image
 						source={Images.AndreaProfilePic}
 						style = {styles.profilePicStyle}
-					/>
-					<Image
-						source={Images.KimProfilePic}
-						style = {styles.profilePicStyle}
-					/>
+						/>
+					</View>
+					<View style={{flex: 1}}>
+						<Image
+							source={Images.KimProfilePic}
+							style = {styles.profilePicStyle}
+						/>
+					</View>
 
 				</View>
 
 				<Text style={styles.notificationsHeaderText}>Notifications</Text>
 
-				<FlatList>
+				{/* <FlatList>
 					data = {this.state.data}
 					keyExtractor={this._keyExtractor}
 					renderItem={this.renderItem}
-				</FlatList>
+				</FlatList> */}
 
-				<View style={{flexDirection: 'row'}}>
-					<Image
-						source={Images.TyProfilePic}
-						style = {styles.profilePicStyle}
-					/>
-					<View>
-						<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
+				<View style={{flex: 1, flexDirection: 'row'}}>
+					<View style={{flex: 1}}>
+						<Image
+							source={Images.TyProfilePic}
+							style = {styles.profilePicStyle}
+						/>
+					</View>
+
+					<View style={{flex: 1}}>
+						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
+							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
+							<Text style={{fontColor: Colors.gray}}>09:24 PM</Text>
+						</View>
 						<Text style={{fontColor: Colors.gray}}>Updated his timeline</Text>
 						<Text>"I juts bought my first property after looking for a place for months with my girlfriend!"</Text>
 					</View>
@@ -123,8 +137,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		margin: 10,
-		borderColor: 'black',
-		borderRadius: 3,
 	},
 	title: {
 		height: 66,
@@ -144,10 +156,9 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
 	},
 	profilePicStyle: {
-		width: '20%',
-		height: '20%',
-		borderWidth: 5,
-		borderRadius: 50,
+		resizeMode: 'contain',
+		width: '100%',
+		height: '100%',
 		borderColor: Colors.gray,
 	}
 })
