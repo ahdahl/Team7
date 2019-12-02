@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppNav} from './App/Navigation';
-import {LoginScreen} from './App/Screens';
+import {LoginScreen, JobSearchScreen} from './App/Screens';
 import * as Font from 'expo-font';
 import firebase from 'firebase';
 
@@ -11,6 +11,9 @@ export default class App extends React.Component {
     super(props);
     
     this.state = {
+      debug: false,
+
+
       fontsLoaded: false,
       // loggedIn: false,
       loggedIn: true,
@@ -46,6 +49,10 @@ export default class App extends React.Component {
   }
 
   render() {
+    if(this.state.debug) {
+      return <JobSearchScreen/>
+    }
+
     if (this.state.fontsLoaded) {
       if (this.state.loggedIn) {
         return <AppNav />;

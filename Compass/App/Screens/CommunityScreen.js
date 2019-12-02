@@ -75,25 +75,25 @@ export default class CommunityScreen extends React.Component {
 			<SafeAreaView style={styles.container}>
 
 				<View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly'}}>
-					<View style={{flex: 1}}>
+					<View style={{flex: 1, padding: 5}}>
 						<Image
 							source={Images.TyProfilePic}
 							style = {styles.profilePicStyle}
 						/>
 					</View>
-					<View style={{flex: 1}}>
+					<View style={{flex: 1, padding: 5}}>
 						<Image
 						source={Images.DonovanProfilePic}
 						style = {styles.profilePicStyle}
 						/>
 					</View>
-					<View style={{flex: 1}}>
+					<View style={{flex: 1, padding: 5}}>
 						<Image
 						source={Images.AndreaProfilePic}
 						style = {styles.profilePicStyle}
 						/>
 					</View>
-					<View style={{flex: 1}}>
+					<View style={{flex: 1, padding: 5}}>
 						<Image
 							source={Images.KimProfilePic}
 							style = {styles.profilePicStyle}
@@ -110,8 +110,12 @@ export default class CommunityScreen extends React.Component {
 					renderItem={this.renderItem}
 				</FlatList> */}
 
-				<View style={{flex: 1, flexDirection: 'row'}}>
-					<View style={{flex: 1}}>
+				<View style={{flex: 1, flexDirection: 'row', margin: 10}}>
+					<View style={{flex: .2}}>
+						<Image
+							source={Images.TyProfilePic}
+							style = {styles.profilePicStyle}
+						/>
 						<Image
 							source={Images.TyProfilePic}
 							style = {styles.profilePicStyle}

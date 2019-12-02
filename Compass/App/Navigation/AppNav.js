@@ -47,6 +47,9 @@ const SearchStack = createStackNavigator({
   Mail: { screen: screens.MailScreen },
   Community: { screen: screens.CommunityScreen },
   Search: { screen: screens.SearchScreen },
+  JobSearch: { screen: screens.JobSearchScreen },
+  SkillSearch: { screen: screens.SkillSearchScreen },
+  NameSearch: { screen: screens.NameSearchScreen },
 }, {
   initialRouteName: 'Search',
   headerMode: 'float',

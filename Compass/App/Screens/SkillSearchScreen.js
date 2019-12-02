@@ -13,8 +13,7 @@ import { Metrics, Colors, Images } from '../Themes';
 
 import { SearchBar } from 'react-native-elements'
 
-import { Ionicons, Feather, AntDesign, MaterialIcons } from '@expo/vector-icons';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Ionicons } from '@expo/vector-icons';
 import { bold, underline } from 'ansi-colors';
 
 
@@ -42,14 +41,14 @@ const DATA = [
   }
 
 
-export default class SearchScreen extends React.Component {
+export default class SkillSearchScreen extends React.Component {
 
 	state = {
 		loading: false,
 	}
 
 	static navigationOptions = {
-		title: 'Search',
+		title: 'Skill Search',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		},
@@ -73,54 +72,45 @@ export default class SearchScreen extends React.Component {
 		this.setState({ search });
 	};
 
-
 	render() {
 		const { search } = this.state;
 		return (
 			<SafeAreaView style={styles.container}>
 				<SearchBar
-					placeholder='Type here...'
+					placeholder='Search skills...'
 					onChangeText={this.updateSearch}
 					value={search}
 					containerStyle={{backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray}}				
 					inputContainerStyle={{backgroundColor: Colors.white}}
 				/>
 
-				<View style={styles.buttonRowContainer}>
-					<TouchableOpacity 
-						style={styles.iconButton}
-						onPress = {() => this.props.navigation.navigate("SkillSearch")}
-					>
-						<AntDesign
-							name='staro'
-							size={50}
-							color={Colors.blue}
-						/>
-						<Text style={{color: Colors.blue}}>Search by Skill</Text>
-					</TouchableOpacity>
-					<TouchableOpacity 
-						style={styles.iconButton}
-						onPress = {() => this.props.navigation.navigate("NameSearch")}
-					>
-							<MaterialIcons
-							name='person-outline'
-							size={50}
-							color={Colors.blue}
-						/>
-						<Text style={{color: Colors.blue}}>Search by Name</Text>
-					</TouchableOpacity>
-					<TouchableOpacity
-						style={styles.iconButton}
-						onPress = {() => this.props.navigation.navigate("JobSearch")}
-					>
-						
-						<Feather
-							name='briefcase'
-							size={50}
-							color={Colors.blue}
-						/>
-						<Text style={{color: Colors.blue}}>Search by Job</Text>
+<View style={styles.buttonRowContainer}>
+					<TouchableOpacity style={styles.iconButton}>
 
+						<Text style={{color: Colors.blue}}>Juggling</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.iconButton}>
+
+						<Text style={{color: Colors.blue}}>Programming</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.iconButton}>
+
+						<Text style={{color: Colors.blue}}>Acting</Text>
+					</TouchableOpacity>
+				</View>
+
+				<View style={styles.buttonRowContainer}>
+					<TouchableOpacity style={styles.iconButton}>
+
+						<Text style={{color: Colors.blue}}>Sports</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.iconButton}>
+
+						<Text style={{color: Colors.blue}}>Manual Labor</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.iconButton}>
+
+						<Text style={{color: Colors.blue}}>Writing</Text>
 					</TouchableOpacity>
 				</View>
 
