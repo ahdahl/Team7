@@ -6,7 +6,8 @@ import {
 	Text,
 	Image,
 	FlatList,
-	TouchableOpacity
+	TouchableOpacity,
+	ScrollView
 } from 'react-native';
 
 import { Metrics, Colors, Images } from '../Themes';
