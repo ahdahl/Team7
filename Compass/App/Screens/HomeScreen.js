@@ -21,7 +21,7 @@ export default class HomeScreen extends React.Component {
 	}
 
 	static navigationOptions = {
-		title: 'Home',
+		title: 'Kim',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		},
@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ padding: 16 }}>
+			<SafeAreaView style={{ margin: 16 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}
@@ -48,7 +48,7 @@ export default class HomeScreen extends React.Component {
 				<ScrollView showsVerticalScrollIndicator={false}>
 					<SafeAreaView style={[styles.nonTimelineSection]}>
 						<SafeAreaView style={[styles.profileHeader]}>
-							<View style={{ flexDirection: "row", alignItems: "center" }}>
+							<View style={{justifyContent:"space-between", flexDirection: "row", alignItems: "center", height:70}}>
 								<Text style={styles.default_text}>PROFILE STATUS
 							</Text>
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>EDITING
@@ -56,7 +56,7 @@ export default class HomeScreen extends React.Component {
 								<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C" />
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
 								</Text>
-								<Image source={Images.KimProfilePic} style={{ width: 70, height: 70, borderRadius: 400 / 2 }} />
+								<Image source={Images.KimProfilePic} style={{ width:70, height: 70}} />
 							</View>
 
 							<ScrollView horizontal={true} style={styles.statSection}>
@@ -80,30 +80,30 @@ export default class HomeScreen extends React.Component {
 							<ScrollView horizontal={true}>
 								<View style={styles.PinnedEventContainer}>
 									<View style={{ flexDirection: "row" }}>
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>Got my first job!{' '}{' '}{' '}{' '} </Text>
+										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Got my first job!{' '}{' '}{' '}{' '} </Text>
 										<Octicons name="pin" size={20} color="#fff" />
 									</View>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>24 Apr 2019</Text>
+									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>24 Apr 2019</Text>
 									<View style={styles.iconContainer}>
 										<AntDesign name="sound" size={20} color="#fff" />
 									</View>
 								</View>
 								<View style={styles.PinnedEventContainer}>
 									<View style={{ flexDirection: "row" }}>
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>Married!!{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '} </Text>
+										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Married!!{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '} </Text>
 										<Octicons name="pin" size={20} color="#fff" />
 									</View>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>6 Feb 2019</Text>
+									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>6 Feb 2019</Text>
 									<View style={styles.iconContainer}>
 										<MaterialIcons name="photo-camera" size={20} color="#fff" />
 									</View>
 								</View>
 								<View style={styles.PinnedEventContainer}>
 									<View style={{ flexDirection: "row" }}>
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>Graduated HS!{' '}{' '}{' '}{' '}{' '} </Text>
+										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Graduated HS!{' '}{' '}{' '}{' '}{' '} </Text>
 										<Octicons name="pin" size={20} color="#fff" />
 									</View>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', paddingLeft: 20 }}>17 Jun 2017</Text>
+									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>17 Jun 2017</Text>
 									<View style={styles.iconContainer}>
 										<MaterialCommunityIcons name="format-quote-open" size={20} color="#fff" />
 									</View>
@@ -114,7 +114,7 @@ export default class HomeScreen extends React.Component {
 						<SafeAreaView style={[styles.basicComponent]}>
 							<View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
 								<Text style={styles.default_text}>YOUR SHORTCUTS </Text>
-								<View style={{ paddingRight: 30 }}>
+								<View style={{ marginRight: 30 }}>
 									<Ionicons name="md-switch" size={20} color='#B2B2B2' />
 								</View>
 							</View>
@@ -175,7 +175,7 @@ export default class HomeScreen extends React.Component {
 }
 
 
-const margin_for_top_navigation_bar = 110;
+const margin_for_top_navigation_bar = 0;
 const margin_bw_component = 25;
 
 const styles = StyleSheet.create({
@@ -217,41 +217,42 @@ const styles = StyleSheet.create({
 		shadowColor: "#CCCCCC",
 		shadowOpacity: 0.1,
 		shadowRadius: 16,
-		paddingBottom: margin_bw_component,
+		marginBottom: margin_bw_component,
+		marginTop: margin_for_top_navigation_bar,
 	},
 	TimelineSection: {
 		flex: 2,
 		backgroundColor: '#F9FAFE'
 	},
 	basicComponent: {
-		paddingTop: margin_bw_component,
-		paddingBottom: margin_bw_component,
-		paddingLeft: margin_bw_component,
+		marginTop: margin_bw_component,
+		marginBottom: margin_bw_component,
+		marginLeft: margin_bw_component,
 	},
 	profileHeader: {
 		flex: 1,
 		backgroundColor: '#fff',
 		alignItems: 'center',
-		paddingTop: margin_for_top_navigation_bar,
-		paddingBottom: margin_bw_component,
+		marginTop: margin_for_top_navigation_bar,
+		marginBottom: margin_bw_component,
 		width: 100 + '%',
 	},
 	statSection: {
-		paddingTop: margin_bw_component,
-		paddingLeft: margin_bw_component * 3,
-		paddingRight: margin_bw_component,
+		marginTop: margin_bw_component,
+		marginLeft: margin_bw_component * 3,
+		marginRight: margin_bw_component,
 		flexDirection: 'row',
 	},
 	statSectionComponent: {
-		paddingTop: margin_bw_component,
-		paddingLeft: margin_bw_component * 2,
-		paddingRight: margin_bw_component,
+		marginTop: margin_bw_component,
+		marginLeft: margin_bw_component * 2,
+		marginRight: margin_bw_component,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 	},
 	num: {
 		fontFamily: 'lato-medium',
-		paddingTop: margin_bw_component / 16,
+		marginTop: margin_bw_component / 16,
 		color: '#000000',
 		fontSize: 30,
 	},
@@ -266,8 +267,8 @@ const styles = StyleSheet.create({
 	},
 	PinnedEventContainer: {
 		marginTop: margin_bw_component,
-		paddingTop: 15,
-		paddingBottom: 15,
+		marginTop: 15,
+		marginBottom: 15,
 		marginLeft: 30,
 		width: 190,
 		backgroundColor: Colors.salmon,
@@ -282,8 +283,8 @@ const styles = StyleSheet.create({
 	},
 	ShortcutContainer: {
 		marginTop: margin_bw_component,
-		paddingTop: 5,
-		paddingBottom: 5,
+		marginTop: 5,
+		marginBottom: 5,
 		marginLeft: 30,
 		width: 80,
 		backgroundColor: Colors.salmon,
@@ -301,20 +302,20 @@ const styles = StyleSheet.create({
 		width: 40 * 2,
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-		paddingLeft: 20,
-		paddingTop: 10,
+		marginLeft: 20,
+		marginTop: 10,
 		textAlign: 'center'
 	},
 	yearContainer: {
 		width: 40 * 2,
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-		paddingTop: 10,
+		marginTop: 10,
 	},
 	yearContainer: {
 		justifyContent: 'center',
 		alignItems: 'center',
-		paddingTop: 20,
+		marginTop: 20,
 	},
 	year_text: {
 		fontFamily: 'lato-medium',
@@ -325,8 +326,8 @@ const styles = StyleSheet.create({
 	},
 	TimelineEventContainer: {
 		marginTop: margin_bw_component,
-		paddingTop: 20,
-		paddingBottom: 20,
+		marginTop: 20,
+		marginBottom: 20,
 		borderRadius: 18,
 		width: 375,
 		backgroundColor: '#fff',
@@ -346,7 +347,7 @@ const styles = StyleSheet.create({
 	},
 
 	append_media_button: {
-		padding: 5,
+		margin: 5,
 		height: 70,
 		width: 70,
 		borderRadius: 140,
@@ -362,7 +363,7 @@ const styles = StyleSheet.create({
 	},
 
 	media_type_button: {
-		padding: 5,
+		margin: 5,
 		height: 40,
 		width: 40,
 		borderRadius: 140,
