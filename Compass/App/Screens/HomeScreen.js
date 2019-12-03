@@ -46,7 +46,7 @@ export default class HomeScreen extends React.Component {
 
 		return (
 			<SafeAreaView style={styles.container}>
-			</SafeAreaView>
+			
 
 			<ScrollView showsVerticalScrollIndicator={false}>
       	<SafeAreaView style={[styles.nonTimelineSection]}>
@@ -173,6 +173,7 @@ export default class HomeScreen extends React.Component {
           </SafeAreaView>
 	      </SafeAreaView>
 			</ScrollView>
+			</SafeAreaView>
 		)
 	}
 }
@@ -341,7 +342,7 @@ iconContainer: {
       marginLeft: 50,
     },
     timeline_date_text: {
-      fontFamily: 'lato-light',
+      fontFamily: 'lato-regular',
       fontSize: 15,
       color:'#000000',
       opacity:0.3,
