@@ -177,6 +177,10 @@ export default class HomeScreen extends React.Component {
 	}
 }
 
+
+const margin_for_top_navigation_bar = 110;
+const margin_bw_component = 25;
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
