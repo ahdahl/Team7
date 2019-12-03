@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppNav} from './App/Navigation';
-import {LoginScreen} from './App/Screens';
+import {LoginScreen, JobSearchScreen} from './App/Screens';
 import * as Font from 'expo-font';
 import firebase from 'firebase';
 
@@ -11,8 +11,12 @@ export default class App extends React.Component {
     super(props);
     
     this.state = {
+      debug: false,
+
+
       fontsLoaded: false,
-      loggedIn: false,
+      // loggedIn: false,
+      loggedIn: true,
       unsubscribe: null
     }
   }
@@ -20,6 +24,7 @@ export default class App extends React.Component {
   async componentWillMount(){
     await Font.loadAsync({
       'lato-regular': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Regular.ttf'),
+      'lato-medium': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Medium.ttf'),
     });
 
     this.setState({ fontsLoaded: true });
@@ -44,6 +49,10 @@ export default class App extends React.Component {
   }
 
   render() {
+    if(this.state.debug) {
+      return <JobSearchScreen/>
+    }
+
     if (this.state.fontsLoaded) {
       if (this.state.loggedIn) {
         return <AppNav />;

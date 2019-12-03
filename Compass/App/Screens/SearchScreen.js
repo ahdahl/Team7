@@ -73,6 +73,7 @@ export default class SearchScreen extends React.Component {
 		this.setState({ search });
 	};
 
+
 	render() {
 		const { search } = this.state;
 		return (
@@ -86,30 +87,41 @@ export default class SearchScreen extends React.Component {
 				/>
 
 				<View style={styles.buttonRowContainer}>
-					<View style={styles.iconButton}>
+					<TouchableOpacity 
+						style={styles.iconButton}
+						onPress = {() => this.props.navigation.navigate("SkillSearch")}
+					>
 						<AntDesign
 							name='staro'
 							size={50}
 							color={Colors.blue}
 						/>
 						<Text style={{color: Colors.blue}}>Search by Skill</Text>
-					</View>
-					<View style={styles.iconButton}>
-						<MaterialIcons
+					</TouchableOpacity>
+					<TouchableOpacity 
+						style={styles.iconButton}
+						onPress = {() => this.props.navigation.navigate("NameSearch")}
+					>
+							<MaterialIcons
 							name='person-outline'
 							size={50}
 							color={Colors.blue}
 						/>
 						<Text style={{color: Colors.blue}}>Search by Name</Text>
-					</View>
-					<View style={styles.iconButton}>
+					</TouchableOpacity>
+					<TouchableOpacity
+						style={styles.iconButton}
+						onPress = {() => this.props.navigation.navigate("JobSearch")}
+					>
+						
 						<Feather
 							name='briefcase'
 							size={50}
 							color={Colors.blue}
 						/>
 						<Text style={{color: Colors.blue}}>Search by Job</Text>
-					</View>
+
+					</TouchableOpacity>
 				</View>
 
 				<Text style={styles.featuredTimelinesText}>Featured Timeline</Text>

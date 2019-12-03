@@ -3,6 +3,9 @@ import HomeScreen from './HomeScreen';
 import MailScreen from './MailScreen';
 import CommunityScreen from './CommunityScreen';
 import SearchScreen from './SearchScreen';
+import JobSearchScreen from './JobSearchScreen';
+import SkillSearchScreen from './SkillSearchScreen';
+import NameSearchScreen from './NameSearchScreen';
 
 export {
   LoginScreen,
@@ -10,4 +13,7 @@ export {
   MailScreen,
   CommunityScreen,
   SearchScreen,
+  JobSearchScreen,
+  SkillSearchScreen,
+  NameSearchScreen,
 }
