@@ -48,9 +48,11 @@ export default class HomeScreen extends React.Component {
 				<ScrollView showsVerticalScrollIndicator={false}>
 					<SafeAreaView style={[styles.nonTimelineSection]}>
 						<SafeAreaView style={[styles.profileHeader]}>
-							<View style={{justifyContent:"space-between", flexDirection: "row", alignItems: "center", height:70}}>
+							<View style={{ flexDirection: "row", alignItems: "center", height:70}}>
 								<Text style={styles.default_text}>PROFILE STATUS
 							</Text>
+							<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
+								</Text>							
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>EDITING
 							</Text>
 								<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C" />
@@ -270,16 +272,18 @@ const styles = StyleSheet.create({
 		marginTop: 15,
 		marginBottom: 15,
 		marginLeft: 30,
+		paddingTop: 15,
+		paddingBottom: 15,
 		width: 190,
 		backgroundColor: Colors.salmon,
 		borderRadius: 10,
 		borderWidth: 1,
 		borderColor: '#fff',
 		elevation: 10,
-		shadowOffset: { width: 5, height: 5 },
+		shadowOffset: { width: 2, height: 2 },
 		shadowColor: "grey",
 		shadowOpacity: 0.5,
-		shadowRadius: 20,
+		shadowRadius: 5,
 	},
 	ShortcutContainer: {
 		marginTop: margin_bw_component,
@@ -293,10 +297,10 @@ const styles = StyleSheet.create({
 		borderColor: '#fff',
 		opacity: 0.9,
 		elevation: 10,
-		shadowOffset: { width: 5, height: 5 },
+		shadowOffset: { width: 2, height: 2 },
 		shadowColor: "grey",
 		shadowOpacity: 0.5,
-		shadowRadius: 20,
+		shadowRadius: 5,
 	},
 	iconContainer: {
 		width: 40 * 2,
