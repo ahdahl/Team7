@@ -50,13 +50,16 @@ export default class HomeScreen extends React.Component {
 
 			<ScrollView showsVerticalScrollIndicator={false}>
       	<SafeAreaView style={[styles.nonTimelineSection]}>
-	      <SafeAreaView style={[styles.profileHeader]}>
+	      	<SafeAreaView style={[styles.profileHeader]}>
 
-				<View style={{flexDirection: "row",alignItems: "center"}}>
-          <Text style={styles.default_text}>PROFILE STATUS     </Text>
-          <Text style={{ fontFamily: 'lato-black', fontSize: 15, color: '#FF727C'}}>EDITING</Text>
-          <MaterialCommunityIcons name="menu-down" size={25} color="#FF727C"/>
-          <Text style={{ fontFamily: 'lato-black', fontSize: 15, color: '#FF727C'}}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}</Text>
+						<View style={{flexDirection: "row",alignItems: "center"}}>
+          		<Text style={styles.default_text}>PROFILE STATUS
+							</Text>
+          		<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon}}>EDITING
+							</Text>
+          		<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C"/>
+          		<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon}}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
+							</Text>
           <Image source={Images.KimProfilePic}  style={{width: 70, height: 70, borderRadius: 400/ 2}} />
 	      </View>
 
@@ -252,7 +255,7 @@ const styles = StyleSheet.create({
     marginRight: 72,
   },
   default_text: {
-    fontFamily: 'lato-black',
+    fontFamily: 'lato-regular',
     fontSize: 15,
     color:'#000000',
     opacity:0.3,
@@ -263,7 +266,7 @@ const styles = StyleSheet.create({
   paddingBottom:15,
   marginLeft:30,
   width: 190,
-  backgroundColor:'#FF727C',
+  backgroundColor:Colors.salmon,
   borderRadius:10,
   borderWidth: 1,
   borderColor: '#fff',
@@ -279,7 +282,7 @@ paddingTop:5,
 paddingBottom:5,
 marginLeft:30,
 width: 80,
-backgroundColor:'#FF727C',
+backgroundColor:Colors.salmon,
 borderRadius:10,
 borderWidth: 1,
 borderColor: '#fff',
@@ -343,7 +346,7 @@ iconContainer: {
       height: 70,
       width: 70,
       borderRadius:140,
-      backgroundColor:'#FF727C',
+      backgroundColor:Colors.salmon,
       position: 'absolute',
       bottom:10,
       right:35,
@@ -359,7 +362,7 @@ iconContainer: {
       height: 40,
       width: 40,
       borderRadius:140,
-      backgroundColor:'#FF727C',
+      backgroundColor:Colors.salmon,
       elevation:10,
       shadowOffset: { width: 5, height: 5 },
       shadowColor: "grey",
