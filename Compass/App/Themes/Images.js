@@ -19,6 +19,7 @@ const images = {
 
     SearchMechanicIcon: require('../Images/SearchButtonIcons/noun_Mechanic_2407506.png'),
     SearchLaptopIcon: require('../Images/SearchButtonIcons/noun_Laptop_1667697.png'),
+    TimelinePic: require('../Images/quickvmerge.png'),
 }
 
 export default images
