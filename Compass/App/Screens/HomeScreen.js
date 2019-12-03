@@ -149,7 +149,7 @@ export default class HomeScreen extends React.Component {
               <View style={styles.TimelineEventContainer}>
               	<Text style={styles.timeline_title_text}>Started working on first app</Text>
               	<Text style={styles.timeline_date_text}>Feb 24 2019</Text>
-              	<Image source={require('./assets/quickvmerge.png')}  style={styles.timeline_image} />
+              	<Image source={Images.TimelinePic}  style={styles.timeline_image} />
               </View>
           	</View>
           	<View style={styles.yearContainer}>
