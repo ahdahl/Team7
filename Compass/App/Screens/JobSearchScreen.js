@@ -90,7 +90,12 @@ export default class JobSearchScreen extends React.Component {
 						<Text style={{color: Colors.blue}}>Entertainer</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<View>
+							<Image
+								source={Images.SearchLaptopIcon}
+								style = {{width: '40%', height: '40%', alignSelf: 'center'}}
+							/>
+						</View>
 						<Text style={{color: Colors.blue}}>Developer</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>

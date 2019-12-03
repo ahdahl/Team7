@@ -16,6 +16,9 @@ const images = {
     DonovanProfilePic: require('../Images/Profiles/ProfilePictures/donovan-circle.png'),
     AndreaProfilePic: require('../Images/Profiles/ProfilePictures/andrea-circle.png'),
     KimProfilePic: require('../Images/Profiles/ProfilePictures/kim-circle.png'),
+
+    SearchMechanicIcon: require('../Images/SearchButtonIcons/noun_Mechanic_2407506.png'),
+    SearchLaptopIcon: require('../Images/SearchButtonIcons/noun_Laptop_1667697.png'),
 }
 
 export default images

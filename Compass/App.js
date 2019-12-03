@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppNav} from './App/Navigation';
-import {LoginScreen, JobSearchScreen} from './App/Screens';
+import {LoginScreen} from './App/Screens';
 import * as Font from 'expo-font';
 import firebase from 'firebase';
 
