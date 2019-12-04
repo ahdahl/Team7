@@ -74,35 +74,40 @@ export default class CommunityScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 
-				<View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly'}}>
-					<View style={{flex: 1, padding: 5}}>
-						<Image
-							source={Images.TyProfilePic}
+				<View style = {styles.topHalfContainer}>
+					<View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly'}}>
+						<View style={{flex: 1, padding: 5}}>
+							<Image
+								source={Images.TyProfilePic}
+								style = {styles.profilePicStyle}
+							/>
+						</View>
+						<View style={{flex: 1, padding: 5}}>
+							<Image
+							source={Images.DonovanProfilePic}
 							style = {styles.profilePicStyle}
-						/>
-					</View>
-					<View style={{flex: 1, padding: 5}}>
-						<Image
-						source={Images.DonovanProfilePic}
-						style = {styles.profilePicStyle}
-						/>
-					</View>
-					<View style={{flex: 1, padding: 5}}>
-						<Image
-						source={Images.AndreaProfilePic}
-						style = {styles.profilePicStyle}
-						/>
-					</View>
-					<View style={{flex: 1, padding: 5}}>
-						<Image
-							source={Images.KimProfilePic}
+							/>
+						</View>
+						<View style={{flex: 1, padding: 5}}>
+							<Image
+							source={Images.AndreaProfilePic}
 							style = {styles.profilePicStyle}
-						/>
+							/>
+						</View>
+						<View style={{flex: 1, padding: 5}}>
+							<Image
+								source={Images.KimProfilePic}
+								style = {styles.profilePicStyle}
+							/>
+						</View>
+
 					</View>
 
+					<View style = {{flex: 1}}>
+						<Text style={styles.notificationsHeaderText}>Notifications</Text>
+					</View>
 				</View>
 
-				<Text style={styles.notificationsHeaderText}>Notifications</Text>
 
 				{/* <FlatList>
 					data = {this.state.data}
@@ -110,27 +115,53 @@ export default class CommunityScreen extends React.Component {
 					renderItem={this.renderItem}
 				</FlatList> */}
 
-				<View style={{flex: 1, flexDirection: 'row', margin: 10}}>
-					<View style={{flex: .2}}>
-						<Image
-							source={Images.TyProfilePic}
-							style = {styles.profilePicStyle}
-						/>
-						<Image
-							source={Images.TyProfilePic}
-							style = {styles.profilePicStyle}
-						/>
+				<View style={styles.notificationsContainer}>
+					<View style={{flex: .2, paddingRight: 8}}>
+						<View style={{flex: .4}}>
+
+							<Image
+								source={Images.TyProfilePic}
+								style = {styles.profilePicStyle}
+							/>
+						</View>
 					</View>
 
-					<View style={{flex: 1}}>
+					<View style={{flex: 1, justifyContent: 'flex-start'}}>
 						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
 							<Text style={{fontColor: Colors.gray}}>09:24 PM</Text>
 						</View>
-						<Text style={{fontColor: Colors.gray}}>Updated his timeline</Text>
-						<Text>"I juts bought my first property after looking for a place for months with my girlfriend!"</Text>
+						<Text style={{fontColor: Colors.gray, fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
+						<Text style={{fontColor: Colors.blue, fontStyle: Metrics.defaultFont}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
 					</View>
 				</View>
+
+
+				<View style={styles.notificationsContainer}>
+					<View style={{flex: 0.2}}>
+						<View style={{flex: 1}}>
+
+							<Ionicons
+								name="md-heart"
+								size={42}
+								color={'red'}
+							/>
+						</View>
+					</View>
+
+					<View style={{flex: 1, justifyContent: 'flex-start'}}>
+						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
+							<Text style={{fontColor: Colors.gray, fontStyle: Metrics.defaultFont}}>
+								<Text style={{fontWeight: 'bold'}}>Amber Byrd </Text>
+								and 
+								<Text style={{fontWeight: 'bold'}}> 14 others </Text>
+								like your timeline
+							</Text>
+							<Text style={{fontColor: Colors.gray}}>03:22 PM</Text>
+						</View>
+					</View>
+				</View>
+
 
 			</SafeAreaView>
 		)
@@ -140,7 +171,6 @@ export default class CommunityScreen extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		margin: 10,
 	},
 	title: {
 		height: 66,
@@ -152,12 +182,27 @@ const styles = StyleSheet.create({
 		lineHeight: 32,
 		color: Colors.white
 	},
+	topHalfContainer: {
+		flex: 1,
+		padding: 10,
+		elevation: 15,
+		shadowOffset: { width: 5, height: 5 },
+		shadowColor: Colors.black,
+		shadowOpacity: 0.1,
+		shadowRadius: 16,
+		backgroundColor: Colors.white
+	},
 	notificationsHeaderText: {
 		flex: 1,
 		fontSize: 28,
-		fontFamily: 'lato-medium',
+		fontFamily: Metrics.defaultFont,
 		color: Colors.blue,
 		alignSelf: 'center',
+	},
+	notificationsContainer: {
+		flex: 1,
+		margin: 10,
+		flexDirection: 'row',
 	},
 	profilePicStyle: {
 		resizeMode: 'contain',
