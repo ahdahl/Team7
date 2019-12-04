@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, View, TextInput, Button } from 'react-native';
+import { Image, StyleSheet, Text, SafeAreaView, View, TextInput, Button } from 'react-native';
 import firestore from '../../firebase';
 import firebase from 'firebase';
-import { Metrics, Colors } from '../Themes';
+import { Metrics, Colors, Images } from '../Themes';
+import { grey } from 'ansi-colors';
 
 export default class LoginScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -59,7 +60,7 @@ export default class LoginScreen extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-
+        <Image source={Images.logo} style={{ width:200, height: 200, marginBottom: 30}} />
         <TextInput
           style={styles.input}
           value={this.state.signUpName}
@@ -79,7 +80,7 @@ export default class LoginScreen extends React.Component {
           onChangeText={(signUpPassword) => this.setState({ signUpPassword })}
           placeholder="Password" 
         />
-        <Button
+        <Button 
           title="Sign Up"
           onPress={()=> this.signUp()}
           color={Colors.salmon}
@@ -99,7 +100,7 @@ export default class LoginScreen extends React.Component {
           onChangeText={(loginPassword) => this.setState({ loginPassword })}
           placeholder="Password" 
         />
-        <Button
+        <Button 
           title='Login'
           onPress={()=> this.login()}
           color={Colors.salmon}

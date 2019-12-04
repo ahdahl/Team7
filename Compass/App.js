@@ -54,11 +54,12 @@ export default class App extends React.Component {
     }
 
     if (this.state.fontsLoaded) {
-      if (this.state.loggedIn) {
-        return <AppNav />;
-      } else {
-        return <LoginScreen />;
-      }  
+      // if (this.state.loggedIn) {
+      //   return <AppNav />;
+      // } else {
+      //   return <LoginScreen />;
+      // } 
+      return <LoginScreen />; 
     } else {
       return <AppLoading />;
     }
