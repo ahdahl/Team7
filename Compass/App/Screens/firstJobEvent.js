@@ -14,15 +14,14 @@ import { Metrics, Colors, Images } from '../Themes';
 
 import { MaterialCommunityIcons, AntDesign, Octicons, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
-
-export default class HomeScreen extends React.Component {
+export default class firstJobEvent extends React.Component {
 
 	state = {
 		loading: false,
 	}
 
 	static navigationOptions = {
-		title: 'Kim',
+		title: 'My First Job',
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		},
@@ -42,128 +41,31 @@ export default class HomeScreen extends React.Component {
 		),
 	};
 
-
 	render() {
-		const { navigate } = this.props.navigation;
 		return (
 			<SafeAreaView style={styles.container}>
 				<ScrollView showsVerticalScrollIndicator={false}>
-					<SafeAreaView style={[styles.nonTimelineSection]}>
-						<SafeAreaView style={[styles.profileHeader]}>
-							<View style={{ flexDirection: "row", alignItems: "center", height:70}}>
-								<Text style={styles.default_text}>PROFILE STATUS
-							</Text>
-							<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
-								</Text>							
-								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>EDITING
-							</Text>
-								<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C" />
-								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
-								</Text>
-								<Image source={Images.KimProfilePic} style={{ width:70, height: 70}} />
-							</View>
-
-							<ScrollView horizontal={true} style={styles.statSection}>
-								<View style={styles.count}>
-									<Text style={styles.default_text}>EVENTS</Text>
-									<View style={{ alignItems: 'center' }}>
-										<Text style={styles.num}>32</Text>
-									</View>
-								</View>
-								<View style={styles.count}>
-									<Text style={styles.default_text}>CONNECTIONS</Text>
-									<View style={{ alignItems: 'center' }}>
-										<Text style={styles.num}>6</Text>
-									</View>
-								</View>
-							</ScrollView>
-						</SafeAreaView>
-
-						<SafeAreaView style={[styles.basicComponent]}>
-							<Text style={styles.default_text}>PINNED EVENTS     </Text>
-							<ScrollView horizontal={true}>
-								<View style={styles.PinnedEventContainer}>
-									<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => this.props.navigation.navigate("firstJobEvent")}>		
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Got my first job!{' '}{' '}{' '}{' '} </Text>
-										<Octicons name="pin" size={20} color="#fff" />
-									</TouchableOpacity>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>24 Apr 2019</Text>
-									<View style={styles.iconContainer}>
-										<AntDesign name="sound" size={20} color="#fff" />
-									</View>
-								</View>
-								<View style={styles.PinnedEventContainer}>
-									<View style={{ flexDirection: "row" }}>
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Married!!{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '} </Text>
-										<Octicons name="pin" size={20} color="#fff" />
-									</View>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>6 Feb 2019</Text>
-									<View style={styles.iconContainer}>
-										<MaterialIcons name="photo-camera" size={20} color="#fff" />
-									</View>
-								</View>
-								<View style={styles.PinnedEventContainer}>
-									<View style={{ flexDirection: "row" }}>
-										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Graduated HS!{' '}{' '}{' '}{' '}{' '} </Text>
-										<Octicons name="pin" size={20} color="#fff" />
-									</View>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>17 Jun 2017</Text>
-									<View style={styles.iconContainer}>
-										<MaterialCommunityIcons name="format-quote-open" size={20} color="#fff" />
-									</View>
-								</View>
-							</ScrollView>
-						</SafeAreaView>
-
-						<SafeAreaView style={[styles.basicComponent]}>
-							<View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
-								<Text style={styles.default_text}>YOUR SHORTCUTS </Text>
-								<View style={{ marginRight: 30 }}>
-									<Ionicons name="md-switch" size={20} color='#B2B2B2' />
-								</View>
-							</View>
-							<ScrollView horizontal={true}>
-								<View style={styles.ShortcutContainer}>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', textAlign: 'center' }}>2019</Text>
-								</View>
-								<View style={styles.ShortcutContainer}>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', textAlign: 'center' }}>2018</Text>
-								</View>
-								<View style={styles.ShortcutContainer}>
-									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', textAlign: 'center' }}>2017 </Text>
-								</View>
-							</ScrollView>
-						</SafeAreaView>
-
-					</SafeAreaView>
 					<SafeAreaView style={[styles.TimelineSection]}>
-
 						<SafeAreaView style={[styles.basicComponent]}>
-							<Text style={styles.default_text}>MY TIMELINE     </Text>
+							<Text style={styles.num}>Date</Text>
 							<View style={styles.yearContainer}>
-								<Text style={styles.year_text}>2019</Text>
 								<View style={styles.TimelineEventContainer}>
-									<Text style={styles.timeline_title_text}>Celebrated 22nd birthday</Text>
-									<Text style={styles.timeline_date_text}>Dec 26 2019</Text>
-								</View>
-								<View style={styles.TimelineEventContainer}>
-									<Text style={styles.timeline_title_text}>Started working on first app</Text>
-									<Text style={styles.timeline_date_text}>Feb 24 2019</Text>
-									<Image source={Images.TimelinePic} style={styles.timeline_image} />
+									<Text style={styles.timeline_title_text}>April 24 2019</Text>
+									{/* <Text style={styles.timeline_date_text}>Dec 26 2019</Text> */}
 								</View>
 							</View>
+                            <Text style={styles.num}>Media</Text>
 							<View style={styles.yearContainer}>
-								<Text style={styles.year_text}>2018</Text>
 								<View style={styles.TimelineEventContainer}>
-									<Text style={styles.timeline_title_text}>Earned HS degree</Text>
+                                    <Image source={Images.googleLogo} style={{ width:100, height: 100, marginLeft: 25}} />
 									<Text style={styles.timeline_date_text}>July 5 2018</Text>
 								</View>
 							</View>
+                            <Text style={styles.num}>Description</Text>
 							<View style={styles.yearContainer}>
-								<Text style={styles.year_text}>2017</Text>
 								<View style={styles.TimelineEventContainer}>
-									<Text style={styles.timeline_title_text}>Took calculus at communtity college </Text>
-									<Text style={styles.timeline_date_text}>July 3 2017</Text>
+									<Text style={styles.timeline_title_text}>I got to fly to New York for an interview. They asked me behavioral, experience, and technical questions. A little scary but definitley exciting too!</Text>
+									<Text style={styles.timeline_date_text}>December 3 2017</Text>
 									<View style={styles.append_media_button}>
 										<View style={{ justiftyContent: "center", alignItems: "center" }}><MaterialIcons name="add" size={50} color="#fff" />
 										</View>
