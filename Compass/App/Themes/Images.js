@@ -18,6 +18,7 @@ const images = {
     KimProfilePic: require('../Images/Profiles/ProfilePictures/kim-circle.png'),
     TimelinePic: require('../Images/quickvmerge.png'),
     logo: require('../Images/compassLogo.png'),
+    googleLogo: require('../Images/google.png')
 }
 
 export default images
