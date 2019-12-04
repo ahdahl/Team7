@@ -17,6 +17,7 @@ const images = {
     AndreaProfilePic: require('../Images/Profiles/ProfilePictures/andrea-circle.png'),
     KimProfilePic: require('../Images/Profiles/ProfilePictures/kim-circle.png'),
     TimelinePic: require('../Images/quickvmerge.png'),
+    logo: require('../Images/compassLogo.png'),
 }
 
 export default images
