@@ -86,30 +86,48 @@ export default class SkillSearchScreen extends React.Component {
 
 <View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.juggling}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Juggling</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.coding}
+							style = {{width: 80, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Programming</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.entertainer}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Acting</Text>
 					</TouchableOpacity>
 				</View>
 
 				<View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.sports}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Sports</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.mechanic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Manual Labor</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.writing}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Writing</Text>
 					</TouchableOpacity>
 				</View>

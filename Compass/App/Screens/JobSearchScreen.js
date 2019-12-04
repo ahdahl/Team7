@@ -86,35 +86,47 @@ export default class JobSearchScreen extends React.Component {
 
 <View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.entertainer}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>
 						<Text style={{color: Colors.blue}}>Entertainer</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-						<View>
-							<Image
-								source={Images.SearchLaptopIcon}
-								style = {{width: '40%', height: '40%', alignSelf: 'center'}}
-							/>
-						</View>
+						<Image
+							source={Images.developer}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>
 						<Text style={{color: Colors.blue}}>Developer</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.police}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>
 						<Text style={{color: Colors.blue}}>Police Officer</Text>
 					</TouchableOpacity>
 				</View>
-
 				<View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.mechanic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>						
 						<Text style={{color: Colors.blue}}>Mechanic</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.beautician}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Beautician</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
+						<Image
+							source={Images.artist}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
 						<Text style={{color: Colors.blue}}>Artist</Text>
 					</TouchableOpacity>
 				</View>

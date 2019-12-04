@@ -87,38 +87,57 @@ export default class NameSearchScreen extends React.Component {
 
 <View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
-						<Text style={{color: Colors.blue}}>A Dahl</Text>
+						<Image
+							source={Images.AndreaProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
+						<Text style={{color: Colors.blue}}>Andrea Dahl</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
-						<Text style={{color: Colors.blue}}>K Perry</Text>
+						<Image
+							source={Images.JulianaProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center', borderRadius: 35}}
+						/>	
+						<Text style={{color: Colors.blue}}>Juliana Kuhn</Text>
 					</TouchableOpacity>
 					<TouchableOpacity
 						style={styles.iconButton}
 						// onPress = {() => this.props.navigation.navigate("404")}
 					>
-						
-						<Text style={{color: Colors.blue}}>D Tokuyama</Text>
+						<Image
+							source={Images.DonovanProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
+						<Text style={{color: Colors.blue}}>Donovan</Text>
+						<Text style={{color: Colors.blue}}>Tokuyama</Text>
 
 					</TouchableOpacity>
 				</View>
 
 				<View style={styles.buttonRowContainer}>
 					<TouchableOpacity style={styles.iconButton}>
-
-						<Text style={{color: Colors.blue}}>T Hunter</Text>
+						<Image
+							source={Images.TyProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
+						<Text style={{color: Colors.blue}}>Ty Hunter</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
-
-						<Text style={{color: Colors.blue}}>K Ngo</Text>
+						<Image
+							source={Images.KimProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>	
+						<Text style={{color: Colors.blue}}>Kim Ngo</Text>
 					</TouchableOpacity>
 					<TouchableOpacity
 						style={styles.iconButton}
 						// onPress = {() => this.props.navigation.navigate("JobSearch")}
 					>
-						
-						<Text style={{color: Colors.blue}}>S Jobs</Text>
+						<Image
+							source={Images.SteveProfilePic}
+							style = {{width: 70, height: 70, alignSelf: 'center'}}
+						/>
+						<Text style={{color: Colors.blue}}>Steve Jobs</Text>
 
 					</TouchableOpacity>
 				</View>
