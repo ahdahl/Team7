@@ -6,6 +6,7 @@ import SearchScreen from './SearchScreen';
 import JobSearchScreen from './JobSearchScreen';
 import SkillSearchScreen from './SkillSearchScreen';
 import NameSearchScreen from './NameSearchScreen';
+import firstJobEvent from './firstJobEvent';
 
 export {
   LoginScreen,
@@ -16,4 +17,5 @@ export {
   JobSearchScreen,
   SkillSearchScreen,
   NameSearchScreen,
+  firstJobEvent
 }

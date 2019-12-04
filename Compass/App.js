@@ -58,7 +58,7 @@ export default class App extends React.Component {
         return <AppNav />;
       } else {
         return <LoginScreen />;
-      }  
+      } 
     } else {
       return <AppLoading />;
     }

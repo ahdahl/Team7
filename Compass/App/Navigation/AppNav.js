@@ -14,6 +14,7 @@ const HomeStack = createStackNavigator({
   Mail: { screen: screens.MailScreen },
   Community: { screen: screens.CommunityScreen },
   Search: { screen: screens.SearchScreen },
+  firstJobEvent: {screen:screens.firstJobEvent}
 }, {
   initialRouteName: 'Home',
   headerMode: 'float',
