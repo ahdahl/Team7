@@ -34,6 +34,8 @@ and/or log in to Expo by running expo login in the terminal. Also, make sure tha
 on the same Wi-Fi network as the computer you’re using, and if a red error message regarding
 the bridge is displayed upon launching the app, you may need to repeatedly click “Reload” and
 wait for the JSBundle to build to 100%.
+
+If you are experiencing fatal JS error, Expo will immediately reload the application and you do not need to do anything.
 ### Limitations
 Due to the time and resource constraints of this project, there are features that are not yet fully implemented:
 * Although the login feature is functional, all profile member information, including images and timeline information, is hard-coded. The data persists through a single run of
