@@ -33,7 +33,7 @@ export default class CommunityScreen extends React.Component {
 		  title: 'Third Item',
 		},
 	];
-	  
+
 	static navigationOptions = {
 		title: 'Community',
 		headerStyle: {
@@ -67,7 +67,7 @@ export default class CommunityScreen extends React.Component {
 		</View>
 	  );
 	}
-  
+
 
 	render() {
 
@@ -131,8 +131,8 @@ export default class CommunityScreen extends React.Component {
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
 							<Text style={{color: Colors.blue}}>09:24 PM</Text>
 						</View>
-						<Text style={{color: 'gray', fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
-						<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
+						<Text style={{color: 'gray', fontFamily: Metrics.defaultFont}}>Updated his timeline</Text>
+						<Text style={{color: Colors.blue, fontFamily: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
 					</View>
 				</View>
 
@@ -150,14 +150,14 @@ export default class CommunityScreen extends React.Component {
 
 
 					<View style={{flex: 1, justifyContent: 'flex-start'}}>
-						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
-							<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, paddingRight: 64}}>
+						<View style={{flex: 0.3, flexDirection: 'row'}}>
+							<Text style={{color: Colors.blue, fontFamily: Metrics.defaultFont, paddingRight: 64}}>
 								<Text style={{fontWeight: 'bold'}}>Amber Byrd </Text>
-								and 
+								and
 								<Text style={{fontWeight: 'bold'}}> 14 others </Text>
 								liked your timeline
 							</Text>
-							<Text style={{color: Colors.blue}}>03:22 PM</Text>
+							<Text style={{color: Colors.blue, paddingLeft:255, position: 'absolute'}}>03:22 PM</Text> # hard coded fix for position of time
 						</View>
 					</View>
 				</View>
@@ -179,8 +179,8 @@ export default class CommunityScreen extends React.Component {
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
 							<Text style={{color: Colors.blue}}>09:24 PM</Text>
 						</View>
-						<Text style={{color: 'gray', fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
-						<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
+						<Text style={{color: 'gray', fontFamily: Metrics.defaultFont}}>Updated his timeline</Text>
+						<Text style={{color: Colors.blue, fontFamily: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
 					</View>
 				</View>
 
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
 		height: 66,
 		textTransform: 'uppercase',
 		fontWeight: 'bold',
-		fontStyle: 'italic',
+		fontFamily: 'italic',
 		fontFamily: Metrics.defaultFont,
 		fontSize: 30,
 		lineHeight: 32,
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
 		margin: 10,
 		flexDirection: 'row',
 		borderBottomColor: Colors.gray,
-		borderBottomWidth: 1,	
+		borderBottomWidth: 1,
 	},
 	profilePicStyle: {
 		resizeMode: 'contain',
