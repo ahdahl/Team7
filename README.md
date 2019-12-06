@@ -8,8 +8,8 @@
 This prototype was developed for the iPhone 8 using React Native, a framework for building mobile applications with JavaScript and leveraging Reactjs, and Expo. However, the minimum supported OS versions are Android 5+ and iOS 10+.
 
 The .zip file of the
-GitHub repository can be downloaded from our website. To run the app using Expo, you need to download or clone this repository
-and run `npm install` inside the directory team7/Compass. Here are step-by-step instructions:
+GitHub repository can be downloaded from our website. To run the app using Expo, you either click this link https://expo.io/@tyhunter/compass or you can download or clone this repository
+and run `npm install` inside the directory team7/Compass. Here are step-by-step instructions for the latter:
 1. Ensure that you have the correct dependencies installed: Node.js version >=4.0, and for native iOS (install/have Xcode, it is free and most probably pre installed)
 1. Install the Expo app onto your phone from the App Store.
 2. Download the .zip file of the evolve repository from our website.
