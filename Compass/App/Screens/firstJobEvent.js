@@ -66,10 +66,10 @@ export default class firstJobEvent extends React.Component {
 								<View style={styles.TimelineEventContainer}>
 									<Text style={styles.timeline_title_text}>I got to fly to New York for an interview. They asked me behavioral, experience, and technical questions. A little scary but definitley exciting too!</Text>
 									<Text style={styles.timeline_date_text}>December 3 2017</Text>
-									<View style={styles.append_media_button}>
+									{/* <View style={styles.append_media_button}>
 										<View style={{ justiftyContent: "center", alignItems: "center" }}><MaterialIcons name="add" size={50} color="#fff" />
 										</View>
-									</View>
+									</View> */}
 								</View>
 							</View>
 						</SafeAreaView>
