@@ -36,9 +36,9 @@ the bridge is displayed upon launching the app, you may need to repeatedly click
 wait for the JSBundle to build to 100%.
 ### Limitations
 Due to the time and resource constraints of this project, there are features that are not yet fully implemented:
-● Although the login feature is functional, all profile member information, including images and timeline information, is hard-coded. The data persists through a single run of
+* Although the login feature is functional, all profile member information, including images and timeline information, is hard-coded. The data persists through a single run of
 the app, but all data is reset once the app is exited.
-● An onboarding tutorial explaining the timeline creation process.
-● Editing timeline upload functionality
-● Ability to toggle from editing profile status and public profile status
-● Many device APIs are supported (check out the "SDK API Reference" on the [Expo website](https://docs.expo.io/versions/v35.0.0/introduction/why-not-expo/)), but not all iOS and Android APIs are available yet
+* An onboarding tutorial explaining the timeline creation process.
+* Editing timeline upload functionality
+* Ability to toggle from editing profile status and public profile status
+* Many device APIs are supported (check out the "SDK API Reference" on the [Expo website](https://docs.expo.io/versions/v35.0.0/introduction/why-not-expo/)), but not all iOS and Android APIs are available yet
