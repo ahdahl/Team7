@@ -67,7 +67,7 @@ export default class SkillSearchScreen extends React.Component {
 				/>
 			</SafeAreaView>
 		),
-	};	
+	};
 
 	updateSearch = search => {
 		this.setState({ search });
@@ -81,7 +81,7 @@ export default class SkillSearchScreen extends React.Component {
 					placeholder='Search skills...'
 					onChangeText={this.updateSearch}
 					value={search}
-					containerStyle={{backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray}}				
+					containerStyle={{backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray}}
 					inputContainerStyle={{backgroundColor: Colors.white}}
 				/>
 
@@ -90,21 +90,21 @@ export default class SkillSearchScreen extends React.Component {
 						<Image
 							source={Images.juggling}
 							style = {{width: 70, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Juggling</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
 						<Image
 							source={Images.coding}
 							style = {{width: 80, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Programming</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
 						<Image
 							source={Images.entertainer}
 							style = {{width: 70, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Acting</Text>
 					</TouchableOpacity>
 				</View>
@@ -114,21 +114,21 @@ export default class SkillSearchScreen extends React.Component {
 						<Image
 							source={Images.sports}
 							style = {{width: 70, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Sports</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
 						<Image
 							source={Images.mechanic}
 							style = {{width: 70, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Manual Labor</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.iconButton}>
 						<Image
 							source={Images.writing}
 							style = {{width: 70, height: 70, alignSelf: 'center'}}
-						/>	
+						/>
 						<Text style={{color: Colors.blue}}>Writing</Text>
 					</TouchableOpacity>
 				</View>
@@ -229,17 +229,17 @@ export default class SkillSearchScreen extends React.Component {
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>opened up my own jazz studio</Text>
 										<Text style={styles.timeline_date_text}>Nov 4 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.BallerinaTimelinePic} style={styles.timeline_image} />
 									</View>
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>visited Ballet Royale Institute of Maryland!</Text>
 										<Text style={styles.timeline_date_text}>Oct 6 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.MarylandTimelinePic} style={styles.timeline_image} />
 									</View>
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>competitive dance programs in New York City</Text>
 										<Text style={styles.timeline_date_text}>Jan 1 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.NYTimelinePic} style={styles.timeline_image} />
 									</View>
 								</View>
 								<View style={styles.yearContainer}>
