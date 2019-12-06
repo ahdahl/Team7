@@ -16,12 +16,26 @@ const images = {
     DonovanProfilePic: require('../Images/Profiles/ProfilePictures/donovan-circle.png'),
     AndreaProfilePic: require('../Images/Profiles/ProfilePictures/andrea-circle.png'),
     KimProfilePic: require('../Images/Profiles/ProfilePictures/kim-circle.png'),
+    JulianaProfilePic: require('../Images/Profiles/ProfilePictures/juliana.jpg'),
+    SteveProfilePic: require('../Images/Profiles/ProfilePictures/steve.png'),
 
     SearchMechanicIcon: require('../Images/SearchButtonIcons/noun_Mechanic_2407506.png'),
     SearchLaptopIcon: require('../Images/SearchButtonIcons/noun_Laptop_1667697.png'),
     TimelinePic: require('../Images/quickvmerge.png'),
+
     logo: require('../Images/compassLogo.png'),
-    googleLogo: require('../Images/google.png')
+    googleLogo: require('../Images/google.png'),
+
+    entertainer: require('../Images/Icons/entertainer.png'),
+    developer: require('../Images/Icons/developer.png'),
+    mechanic: require('../Images/Icons/mechanic.png'),
+    police: require('../Images/Icons/police.png'),
+    beautician: require('../Images/Icons/beautician.png'),
+    artist: require('../Images/Icons/artist.png'),
+    coding: require('../Images/Icons/coding.png'),
+    sports: require('../Images/Icons/sports.png'),
+    writing: require('../Images/Icons/writing.png'),
+    juggling: require('../Images/Icons/juggling.png'),    
 }
 
 export default images
