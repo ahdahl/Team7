@@ -127,7 +127,7 @@ export default class SearchScreen extends React.Component {
 				<Text style={styles.featuredTimelinesText}>Featured Timeline</Text>
 
 				{/* Uncomment the 2 TouchablOpacity lines once you add Andrea's timeline screen */}
-				{/* <TouchableOpacity onPress={() => navigation.navigate("AndreaScreen")}> */}
+				<TouchableOpacity style={{flex: 1,}} onPress={() => this.props.navigation.navigate("OtherProfile")}>
 				<SafeAreaView style={styles.container}>
 					<ScrollView showsVerticalScrollIndicator={false}>
 						<SafeAreaView style={[styles.nonTimelineSection]}>
@@ -255,6 +255,7 @@ export default class SearchScreen extends React.Component {
 						</SafeAreaView>
 					</ScrollView>
 				</SafeAreaView>
+				</TouchableOpacity>
 			</SafeAreaView>
 
 

@@ -51,6 +51,7 @@ const SearchStack = createStackNavigator({
   JobSearch: { screen: screens.JobSearchScreen },
   SkillSearch: { screen: screens.SkillSearchScreen },
   NameSearch: { screen: screens.NameSearchScreen },
+  OtherProfile: { screen: screens.OtherProfileScreen },
 }, {
   initialRouteName: 'Search',
   headerMode: 'float',
