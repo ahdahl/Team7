@@ -9,7 +9,7 @@ import { AppLoading } from 'expo';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       debug: false,
 
@@ -25,6 +25,7 @@ export default class App extends React.Component {
     await Font.loadAsync({
       'lato-regular': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Regular.ttf'),
       'lato-medium': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-Medium.ttf'),
+      'lato-italic': require('./assets/fonts/Lato2OFL/Lato2OFL/Lato-MediumItalic.ttf'),
     });
 
     this.setState({ fontsLoaded: true });
@@ -58,7 +59,7 @@ export default class App extends React.Component {
         return <AppNav />;
       } else {
         return <LoginScreen />;
-      } 
+      }
     } else {
       return <AppLoading />;
     }

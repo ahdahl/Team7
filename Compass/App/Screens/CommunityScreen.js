@@ -73,37 +73,37 @@ export default class CommunityScreen extends React.Component {
 
 		return (
 			<SafeAreaView style={styles.container}>
-
 				<View style = {styles.topHalfContainer}>
-					<View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly'}}>
-						<View style={{flex: 1, padding: 5}}>
+				<Text style={{flex:1, fontSize: 14,fontStyle: 'italic', fontFamily: 'lato-italic', color: Colors.blue, alignSelf: 'center'}}>Your Connections</Text>
+					<View style = {{flex: 2, flexDirection: 'row', justifyContent: 'space-evenly', paddingRight:40}}>
+						<View style={{flex: 1}}>
 							<Image
 								source={Images.TyProfilePic}
-								style = {styles.profilePicStyle}
+								style = {styles.rowProfilePicStyle}
 							/>
 						</View>
-						<View style={{flex: 1, padding: 5}}>
+						<View style={{flex: 1}}>
 							<Image
 							source={Images.DonovanProfilePic}
-							style = {styles.profilePicStyle}
+							style = {styles.rowProfilePicStyle}
 							/>
 						</View>
-						<View style={{flex: 1, padding: 5}}>
+						<View style={{flex: 1}}>
 							<Image
 							source={Images.AndreaProfilePic}
-							style = {styles.profilePicStyle}
+							style = {styles.rowProfilePicStyle}
 							/>
 						</View>
-						<View style={{flex: 1, padding: 5}}>
+						<View style={{flex: 1}}>
 							<Image
 								source={Images.KimProfilePic}
-								style = {styles.profilePicStyle}
+								style = {styles.rowProfilePicStyle}
 							/>
 						</View>
 
 					</View>
 
-					<View style = {{flex: 1}}>
+					<View style = {{flex: 3, paddignTop: 10}}>
 						<Text style={styles.notificationsHeaderText}>Notifications</Text>
 					</View>
 				</View>
@@ -157,7 +157,7 @@ export default class CommunityScreen extends React.Component {
 								<Text style={{fontWeight: 'bold'}}> 14 others </Text>
 								liked your timeline
 							</Text>
-							<Text style={{color: Colors.blue, paddingLeft:255, position: 'absolute'}}>03:22 PM</Text> 
+							<Text style={{color: Colors.blue, paddingLeft:255, position: 'absolute'}}>03:22 PM</Text>
 						</View>
 					</View>
 				</View>
@@ -227,6 +227,12 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		borderBottomColor: Colors.gray,
 		borderBottomWidth: 1,
+	},
+	rowProfilePicStyle: {
+		resizeMode: 'contain',
+		width: '150%',
+		height: '150%',
+		borderColor: Colors.gray,
 	},
 	profilePicStyle: {
 		resizeMode: 'contain',
