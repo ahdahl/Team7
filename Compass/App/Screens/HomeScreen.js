@@ -59,7 +59,7 @@ export default class HomeScreen extends React.Component {
 								<Text style={styles.default_text}>PROFILE STATUS
 							</Text>
 							<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
-								</Text>							
+								</Text>
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>EDITING
 							</Text>
 								<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C" />
@@ -88,7 +88,7 @@ export default class HomeScreen extends React.Component {
 							<Text style={styles.default_text}>PINNED EVENTS     </Text>
 							<ScrollView horizontal={true}>
 								<View style={styles.PinnedEventContainer}>
-									<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => this.props.navigation.navigate("firstJobEvent")}>		
+									<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => this.props.navigation.navigate("firstJobEvent")}>
 										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Got my first job!{' '}{' '}{' '}{' '} </Text>
 										<Octicons name="pin" size={20} color="#fff" />
 									</TouchableOpacity>

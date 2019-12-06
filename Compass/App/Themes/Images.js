@@ -22,7 +22,9 @@ const images = {
     SearchMechanicIcon: require('../Images/SearchButtonIcons/noun_Mechanic_2407506.png'),
     SearchLaptopIcon: require('../Images/SearchButtonIcons/noun_Laptop_1667697.png'),
     TimelinePic: require('../Images/quickvmerge.png'),
-
+    BallerinaTimelinePic: require('../Images/ballerina_shoes_tying.jpg'),
+    MarylandTimelinePic: require('../Images/maryland.jpg'),
+    NYTimelinePic: require('../Images/nydance.jpg'),
     logo: require('../Images/compassLogo.png'),
     googleLogo: require('../Images/google.png'),
 
@@ -35,7 +37,7 @@ const images = {
     coding: require('../Images/Icons/coding.png'),
     sports: require('../Images/Icons/sports.png'),
     writing: require('../Images/Icons/writing.png'),
-    juggling: require('../Images/Icons/juggling.png'),    
+    juggling: require('../Images/Icons/juggling.png'),
 }
 
 export default images
