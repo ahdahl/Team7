@@ -157,7 +157,7 @@ export default class CommunityScreen extends React.Component {
 								<Text style={{fontWeight: 'bold'}}> 14 others </Text>
 								liked your timeline
 							</Text>
-							<Text style={{color: Colors.blue, paddingLeft:255, position: 'absolute'}}>03:22 PM</Text> # hard coded fix for position of time
+							<Text style={{color: Colors.blue, paddingLeft:255, position: 'absolute'}}>03:22 PM</Text> 
 						</View>
 					</View>
 				</View>
