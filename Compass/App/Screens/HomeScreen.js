@@ -11,8 +11,12 @@ import {
 } from 'react-native';
 
 import { Metrics, Colors, Images } from '../Themes';
+import firebase from 'firebase';
+import firestore from '../../firebase';
+
 
 import { MaterialCommunityIcons, AntDesign, Octicons, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { UserInterfaceIdiom } from 'expo-constants';
 
 
 export default class HomeScreen extends React.Component {
@@ -23,6 +27,7 @@ export default class HomeScreen extends React.Component {
 
 	static navigationOptions = {
 		title: 'Kim',
+		// title: firestore.doc('users/' + firebase.auth().currentUser.uid).get(name),
 		headerStyle: {
 			backgroundColor: Colors.salmon,
 		},
@@ -32,7 +37,7 @@ export default class HomeScreen extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ margin: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, SafeAreaView, View, TextInput, Button } from 'react-native';
+import { Image, StyleSheet, Text, SafeAreaView, View, TextInput, Button, KeyboardAvoidingView } from 'react-native';
 import firestore from '../../firebase';
 import firebase from 'firebase';
 import { Metrics, Colors, Images } from '../Themes';
@@ -26,8 +26,8 @@ export default class LoginScreen extends React.Component {
       signUpName: '',
       signUpEmail: '',
       signUpPassword: '',
-      loginEmail: '',
-      loginPassword: '',
+      loginEmail: 'kim12341234@gmail.com',
+      loginPassword: 'password',
       errorMessageLogin: '',
     }
   }
@@ -37,11 +37,13 @@ export default class LoginScreen extends React.Component {
       const response = await firebase.auth().createUserWithEmailAndPassword(this.state.signUpEmail, this.state.signUpPassword);
       if(response.user) {
         const user = firebase.auth().currentUser;
-        var userDocRef = firestore.doc('users/' + user.uid);
 
+        //adds full name to firestore database as 'name'
+        var userDocRef = firestore.doc('users/' + user.uid);
         userDocRef.set({
           name: this.state.signUpName
         });
+
         this.props.updateStatus();
       }
     } catch (err) {
@@ -59,54 +61,55 @@ export default class LoginScreen extends React.Component {
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <Image source={Images.logo} style={{ width:200, height: 200, marginBottom: 30}} />
-        <TextInput
-          style={styles.input}
-          value={this.state.signUpName}
-          onChangeText={(signUpName) => this.setState({ signUpName })}
-          placeholder="Name" 
-        />
-        <TextInput
-          style={styles.input}
-          value={this.state.signUpEmail}
-          onChangeText={(signUpEmail) => this.setState({ signUpEmail })}
-          placeholder="Email" 
-        />
-        <TextInput
-          style={styles.input}
-          value={this.state.signUpPassword}
-          secureTextEntry={true}
-          onChangeText={(signUpPassword) => this.setState({ signUpPassword })}
-          placeholder="Password" 
-        />
-        <Button 
-          title="Sign Up"
-          onPress={()=> this.signUp()}
-          color={Colors.salmon}
-        />
+        <KeyboardAvoidingView behavior={'padding'} style={styles.container}>
+
+          <Image source={Images.logo} style={{ width:200, height: 200, marginBottom: 30}} />
+          <TextInput
+            style={styles.input}
+            value={this.state.signUpName}
+            onChangeText={(signUpName) => this.setState({ signUpName })}
+            placeholder="Name" 
+          />
+          <TextInput
+            style={styles.input}
+            value={this.state.signUpEmail}
+            onChangeText={(signUpEmail) => this.setState({ signUpEmail })}
+            placeholder="Email" 
+          />
+          <TextInput
+            style={styles.input}
+            value={this.state.signUpPassword}
+            secureTextEntry={true}
+            onChangeText={(signUpPassword) => this.setState({ signUpPassword })}
+            placeholder="Password" 
+          />
+          <Button 
+            title="Sign Up"
+            onPress={()=> this.signUp()}
+            color={Colors.salmon}
+          />
 
 
-        <TextInput
-          style={[styles.input, {marginTop: 50}]}
-          value={this.state.loginEmail}
-          onChangeText={(loginEmail) => this.setState({ loginEmail })}
-          placeholder="Email" 
-        />
-        <TextInput
-          style={styles.input}
-          value={this.state.loginPassword}
-          secureTextEntry={true}
-          onChangeText={(loginPassword) => this.setState({ loginPassword })}
-          placeholder="Password" 
-        />
-        <Button 
-          title='Login'
-          onPress={()=> this.login()}
-          color={Colors.salmon}
-        />
+          <TextInput
+            style={[styles.input, {marginTop: 50}]}
+            value={this.state.loginEmail}
+            onChangeText={(loginEmail) => this.setState({ loginEmail })}
+            placeholder="Email" 
+          />
+          <TextInput
+            style={styles.input}
+            value={this.state.loginPassword}
+            secureTextEntry={true}
+            onChangeText={(loginPassword) => this.setState({ loginPassword })}
+            placeholder="Password" 
+          />
+          <Button 
+            title='Login'
+            onPress={()=> this.login()}
+            color={Colors.salmon}
+          />
 
-      </SafeAreaView>
+        </KeyboardAvoidingView>
     );
   }
 }

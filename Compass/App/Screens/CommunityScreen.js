@@ -45,7 +45,7 @@ export default class CommunityScreen extends React.Component {
         },
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style = {{padding: 16}}>
+			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}
@@ -116,7 +116,7 @@ export default class CommunityScreen extends React.Component {
 				</FlatList> */}
 
 				<View style={styles.notificationsContainer}>
-					<View style={{flex: .2, paddingRight: 8}}>
+					<View style={{flex: .2, paddingRight: 12}}>
 						<View style={{flex: .4}}>
 
 							<Image
@@ -127,41 +127,62 @@ export default class CommunityScreen extends React.Component {
 					</View>
 
 					<View style={{flex: 1, justifyContent: 'flex-start'}}>
-						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
+						<View style={{flex: 0.3, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
-							<Text style={{fontColor: Colors.gray}}>09:24 PM</Text>
+							<Text style={{color: Colors.blue}}>09:24 PM</Text>
 						</View>
-						<Text style={{fontColor: Colors.gray, fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
-						<Text style={{fontColor: Colors.blue, fontStyle: Metrics.defaultFont}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
+						<Text style={{color: 'gray', fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
+						<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
 					</View>
 				</View>
 
 
 				<View style={styles.notificationsContainer}>
-					<View style={{flex: 0.2}}>
-						<View style={{flex: 1}}>
-
+					<View style={{flex: 0.2, paddingRight: 12}}>
+						<View style={{flex: 1, alignSelf: 'center'}}>
 							<Ionicons
 								name="md-heart"
-								size={42}
+								size={46}
 								color={'red'}
 							/>
 						</View>
 					</View>
 
+
 					<View style={{flex: 1, justifyContent: 'flex-start'}}>
 						<View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
-							<Text style={{fontColor: Colors.gray, fontStyle: Metrics.defaultFont}}>
+							<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, paddingRight: 64}}>
 								<Text style={{fontWeight: 'bold'}}>Amber Byrd </Text>
 								and 
 								<Text style={{fontWeight: 'bold'}}> 14 others </Text>
-								like your timeline
+								liked your timeline
 							</Text>
-							<Text style={{fontColor: Colors.gray}}>03:22 PM</Text>
+							<Text style={{color: Colors.blue}}>03:22 PM</Text>
 						</View>
 					</View>
 				</View>
 
+
+				<View style={styles.notificationsContainer}>
+					<View style={{flex: .2, paddingRight: 12}}>
+						<View style={{flex: .4}}>
+
+							<Image
+								source={Images.TyProfilePic}
+								style = {styles.profilePicStyle}
+							/>
+						</View>
+					</View>
+
+					<View style={{flex: 1, justifyContent: 'flex-start'}}>
+						<View style={{flex: 0.3, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
+							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
+							<Text style={{color: Colors.blue}}>09:24 PM</Text>
+						</View>
+						<Text style={{color: 'gray', fontStyle: Metrics.defaultFont}}>Updated his timeline</Text>
+						<Text style={{color: Colors.blue, fontStyle: Metrics.defaultFont, marginTop: 24, marginRight: 36}}>"I just bought my first property after looking for a place for months with my girlfriend!"</Text>
+					</View>
+				</View>
 
 			</SafeAreaView>
 		)
@@ -198,11 +219,14 @@ const styles = StyleSheet.create({
 		fontFamily: Metrics.defaultFont,
 		color: Colors.blue,
 		alignSelf: 'center',
+		paddingTop: 36,
 	},
 	notificationsContainer: {
 		flex: 1,
 		margin: 10,
 		flexDirection: 'row',
+		borderBottomColor: Colors.gray,
+		borderBottomWidth: 1,	
 	},
 	profilePicStyle: {
 		resizeMode: 'contain',

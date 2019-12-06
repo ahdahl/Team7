@@ -58,7 +58,7 @@ export default class JobSearchScreen extends React.Component {
         },
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style = {{padding: 16}}>
+			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
 				<Ionicons
 					name='ios-settings'
 					size={42}
