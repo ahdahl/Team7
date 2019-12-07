@@ -14,7 +14,7 @@ import { Metrics, Colors, Images } from '../Themes';
 
 import { MaterialCommunityIcons, AntDesign, Octicons, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
-export default class HomeScreen extends React.Component {
+export default class OtherProfile extends React.Component {
 
 	state = {
 		loading: false,

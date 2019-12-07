@@ -36,7 +36,7 @@ export default class App extends React.Component {
     // auto detects whether or not user is signed in.
     let unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ loggedIn: true });
+        // this.setState({ loggedIn: true });
       } else {
         this.setState({ loggedIn: false });
       }

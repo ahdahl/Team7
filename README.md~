@@ -8,8 +8,8 @@
 This prototype was developed for the iPhone 8 using React Native, a framework for building mobile applications with JavaScript and leveraging Reactjs, and Expo. However, the minimum supported OS versions are Android 5+ and iOS 10+.
 
 The .zip file of the
-GitHub repository can be downloaded from our website. To run the app using Expo, you either click this link https://expo.io/@tyhunter/compass or you can download or clone this repository
-and run `npm install` inside the directory team7/Compass. Here are step-by-step instructions for the latter:
+GitHub repository can be downloaded from our website. To run the app using Expo, you need to download or clone this repository
+and run `npm install` inside the directory team7/Compass. Here are step-by-step instructions:
 1. Ensure that you have the correct dependencies installed: Node.js version >=4.0, and for native iOS (install/have Xcode, it is free and most probably pre installed)
 1. Install the Expo app onto your phone from the App Store.
 2. Download the .zip file of the evolve repository from our website.
@@ -34,13 +34,11 @@ and/or log in to Expo by running expo login in the terminal. Also, make sure tha
 on the same Wi-Fi network as the computer you’re using, and if a red error message regarding
 the bridge is displayed upon launching the app, you may need to repeatedly click “Reload” and
 wait for the JSBundle to build to 100%.
-
-If you are experiencing fatal JS error, Expo will immediately reload the application and you do not need to do anything.
 ### Limitations
 Due to the time and resource constraints of this project, there are features that are not yet fully implemented:
-* Although the login feature is functional, all profile member information, including images and timeline information, is hard-coded. The data persists through a single run of
+● Although the login feature is functional, all profile member information, including images and timeline information, is hard-coded. The data persists through a single run of
 the app, but all data is reset once the app is exited.
-* An onboarding tutorial explaining the timeline creation process.
-* Editing timeline upload functionality
-* Ability to toggle from editing profile status and public profile status
-* Many device APIs are supported (check out the "SDK API Reference" on the [Expo website](https://docs.expo.io/versions/v35.0.0/introduction/why-not-expo/)), but not all iOS and Android APIs are available yet
+● An onboarding tutorial explaining the timeline creation process.
+● Editing timeline upload functionality
+● Ability to toggle from editing profile status and public profile status
+● Many device APIs are supported (check out the "SDK API Reference" on the [Expo website](https://docs.expo.io/versions/v35.0.0/introduction/why-not-expo/)), but not all iOS and Android APIs are available yet

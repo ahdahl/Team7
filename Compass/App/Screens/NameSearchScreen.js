@@ -147,6 +147,7 @@ export default class NameSearchScreen extends React.Component {
 
 				{/* Uncomment the 2 TouchablOpacity lines once you add Andrea's timeline screen */}
 				{/* <TouchableOpacity onPress={() => navigation.navigate("AndreaScreen")}> */}
+				<TouchableOpacity style={{flex: 1,}} onPress={() => this.props.navigation.navigate("OtherProfile")}>
 				<SafeAreaView style={styles.container}>
 					<ScrollView showsVerticalScrollIndicator={false}>
 						<SafeAreaView style={[styles.nonTimelineSection]}>
@@ -239,17 +240,17 @@ export default class NameSearchScreen extends React.Component {
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>opened up my own jazz studio</Text>
 										<Text style={styles.timeline_date_text}>Nov 4 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.BallerinaTimelinePic} style={styles.timeline_image} />
 									</View>
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>visited Ballet Royale Institute of Maryland!</Text>
 										<Text style={styles.timeline_date_text}>Oct 6 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.MarylandTimelinePic} style={styles.timeline_image} />
 									</View>
 									<View style={styles.TimelineEventContainer}>
 										<Text style={styles.timeline_title_text}>competitive dance programs in New York City</Text>
 										<Text style={styles.timeline_date_text}>Jan 1 2019</Text>
-										<Image source={Images.TimelinePic} style={styles.timeline_image} />
+										<Image source={Images.NYTimelinePic} style={styles.timeline_image} />
 									</View>
 								</View>
 								<View style={styles.yearContainer}>
@@ -274,6 +275,8 @@ export default class NameSearchScreen extends React.Component {
 						</SafeAreaView>
 					</ScrollView>
 				</SafeAreaView>
+
+												</TouchableOpacity>
 				{/* </TouchableOpacity> */}
 
 
