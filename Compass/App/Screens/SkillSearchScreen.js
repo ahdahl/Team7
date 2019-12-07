@@ -78,11 +78,18 @@ export default class SkillSearchScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<SearchBar
-					placeholder='Search skills...'
+					placeholder='Search Skills...'
 					onChangeText={this.updateSearch}
 					value={search}
-					containerStyle={{backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray}}
-					inputContainerStyle={{backgroundColor: Colors.white}}
+					containerStyle={{
+						backgroundColor: Colors.white,
+						borderWidth: 1,
+						borderRadius: 16,
+						borderColor: Colors.gray,
+						borderTopColor: Colors.gray,
+						borderBottomColor: Colors.gray
+					}}
+					inputContainerStyle={{ backgroundColor: Colors.white }}
 				/>
 
 <View style={styles.buttonRowContainer}>

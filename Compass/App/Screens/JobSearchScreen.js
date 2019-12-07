@@ -81,7 +81,14 @@ export default class JobSearchScreen extends React.Component {
 					placeholder='Search by jobs...'
 					onChangeText={this.updateSearch}
 					value={search}
-					containerStyle={{ backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray }}
+					containerStyle={{
+						backgroundColor: Colors.white,
+						borderWidth: 1,
+						borderRadius: 16,
+						borderColor: Colors.gray,
+						borderTopColor: Colors.gray,
+						borderBottomColor: Colors.gray
+					}}
 					inputContainerStyle={{ backgroundColor: Colors.white }}
 				/>
 

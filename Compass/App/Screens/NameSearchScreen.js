@@ -79,10 +79,17 @@ export default class NameSearchScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<SearchBar
-					placeholder='Search names...'
+					placeholder='Search Names...'
 					onChangeText={this.updateSearch}
 					value={search}
-					containerStyle={{ backgroundColor: Colors.white, borderWidth: 1, borderRadius: 16, borderColor: Colors.gray }}
+					containerStyle={{
+						backgroundColor: Colors.white,
+						borderWidth: 1,
+						borderRadius: 16,
+						borderColor: Colors.gray,
+						borderTopColor: Colors.gray,
+						borderBottomColor: Colors.gray
+					}}
 					inputContainerStyle={{ backgroundColor: Colors.white }}
 				/>
 
