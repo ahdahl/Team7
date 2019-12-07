@@ -3,6 +3,7 @@ import {
 	StyleSheet,
 	SafeAreaView,
 	View,
+	Alert,
 	Text,
 	Image,
 	FlatList,
@@ -41,6 +42,11 @@ export default class OtherProfile extends React.Component {
 		),
 	};
 
+	_simpleAlertHandler=()=>{
+	//function to make simple alert
+	alert('Now connected with Andrea');
+}
+
 
 	render() {
 		return (
@@ -78,7 +84,7 @@ export default class OtherProfile extends React.Component {
 
 						<SafeAreaView style={{marginTop: 10, marginBottom:70}}>
 							<View style={{flexDirection: "row", justifyContent:"center"}}>
-							<View style={styles.connect_button}><Text style={styles.connect_button_text}>CONNECT</Text></View>
+							<TouchableOpacity style={styles.connect_button} onPress={this._simpleAlertHandler}><Text style={styles.connect_button_text}>CONNECT</Text></TouchableOpacity>
 							</View>
 						</SafeAreaView>
 						<SafeAreaView style={[styles.basicComponent]}>
