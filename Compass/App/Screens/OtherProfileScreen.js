@@ -76,6 +76,11 @@ export default class OtherProfile extends React.Component {
 							</ScrollView>
 						</SafeAreaView>
 
+						<SafeAreaView style={{marginTop: 10, marginBottom:70}}>
+							<View style={{flexDirection: "row", justifyContent:"center"}}>
+							<View style={styles.connect_button}><Text style={styles.connect_button_text}>CONNECT</Text></View>
+							</View>
+						</SafeAreaView>
 						<SafeAreaView style={[styles.basicComponent]}>
 							<Text style={styles.default_text}>PINNED EVENTS     </Text>
 							<ScrollView horizontal={true}>
@@ -367,6 +372,26 @@ const styles = StyleSheet.create({
 		shadowColor: "grey",
 		shadowOpacity: 0.9,
 		shadowRadius: 10,
+	},
+	connect_button: {
+		flex: 1,
+	  alignItems: 'center',
+		justifyContent: 'space-around',
+		margin: 5,
+		padding: 7,
+		borderRadius: 140,
+		backgroundColor: Colors.salmon,
+		elevation: 5,
+		shadowOffset: { width: 2, height: 2 },
+		shadowColor: "grey",
+		shadowOpacity: 0.9,
+		shadowRadius: 2,
+	},
+	connect_button_text: {
+			fontFamily: 'lato-regular',
+			fontSize: 15,
+			color: '#fff',
+			textAlign: 'center',
 	},
 
 	media_type_button: {

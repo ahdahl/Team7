@@ -89,10 +89,12 @@ export default class CommunityScreen extends React.Component {
 							/>
 						</View>
 						<View style={{flex: 1}}>
+						<TouchableOpacity style={{flex: 1,}} onPress={() => this.props.navigation.navigate("OtherProfile")}>
 							<Image
 							source={Images.AndreaProfilePic}
 							style = {styles.rowProfilePicStyle}
 							/>
+						</TouchableOpacity>
 						</View>
 						<View style={{flex: 1}}>
 							<Image

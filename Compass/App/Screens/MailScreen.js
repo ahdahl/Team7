@@ -48,13 +48,17 @@ export default class MailScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<View style={styles.messageContainer}>
+				<TouchableOpacity onPress={() => this.props.navigation.navigate("OtherProfile")}>
 					<View style={styles.contactContainer,{  flexDirection: "row", }}>
+
 						<Image source={Images.AndreaProfilePic} style={styles.contactImage} />
 						<View style={styles.TextContainer}>
 							<Text style={styles.contactName}>Andrea Dahl</Text>
 							<Text style={styles.messagePreview}>That's really cool! I'd love to hear more :) </Text>
 						</View>
+
 					</View>
+						</TouchableOpacity>
 					<View style={styles.contactContainer,{  flexDirection: "row", }}>
 						<Image source={Images.DonovanProfilePic} style={styles.contactImage} />
 						<View style={styles.TextContainer}>
@@ -68,8 +72,8 @@ export default class MailScreen extends React.Component {
 							<Text style={styles.contactName}>Ty Hunter</Text>
 							<Text style={styles.messagePreview}>I heard there's a career fair coming up in our area, do you think you'll go? </Text>
 						</View>
-					</View>		
-				</View>			
+					</View>
+				</View>
 			</SafeAreaView>
 		)
 	}
@@ -116,7 +120,7 @@ const styles = StyleSheet.create({
 	},
 	messageContainer: {
 		marginLeft: 20,
-		marginRight: 50,	
+		marginRight: 50,
 		borderRadius: 18,
 		backgroundColor: '#fff',
 	},
