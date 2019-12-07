@@ -90,16 +90,19 @@ export default class HomeScreen extends React.Component {
 						<SafeAreaView style={[styles.basicComponent]}>
 							<Text style={styles.default_text}>PINNED EVENTS     </Text>
 							<ScrollView horizontal={true}>
-								<View style={styles.PinnedEventContainer}>
-									<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => this.props.navigation.navigate("firstJobEvent")}>
+								<TouchableOpacity
+									style={styles.PinnedEventContainer}
+									onPress={() => this.props.navigation.navigate("firstJobEvent")}>
+										
+									<View style={{ flexDirection: "row" }}>
 										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Got my first job!{' '}{' '}{' '}{' '} </Text>
 										<Octicons name="pin" size={20} color="#fff" />
-									</TouchableOpacity>
+									</View>
 									<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>24 Apr 2019</Text>
 									<View style={styles.iconContainer}>
 										<AntDesign name="sound" size={20} color="#fff" />
 									</View>
-								</View>
+								</TouchableOpacity>
 								<View style={styles.PinnedEventContainer}>
 									<View style={{ flexDirection: "row" }}>
 										<Text style={{ fontFamily: 'lato-medium', fontSize: 15, color: '#fff', marginLeft: 20 }}>Married!!{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '} </Text>
