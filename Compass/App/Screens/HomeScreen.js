@@ -38,11 +38,14 @@ export default class HomeScreen extends React.Component {
 		headerTintColor: Colors.white,
 		headerRight: (
 			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
-				<Ionicons
-					name="ios-settings"
-					size={42}
-					color={Colors.white}
-				/>
+				<TouchableOpacity onPress ={() => firebase.auth().signOut()}>
+					<Ionicons
+						name="ios-settings"
+						size={42}
+						color={Colors.white}
+					/>
+					
+				</TouchableOpacity>
 			</SafeAreaView>
 		),
 	};
