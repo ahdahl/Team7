@@ -31,7 +31,7 @@ const DATA = [
 		id: '58694a0f-3da1-471f-bd96-145571e29d72',
 		name: 'Third Item',
 	},
-Tim
+]
 
 function Item({ name }) {
 	return (
@@ -136,6 +136,7 @@ export default class JobSearchScreen extends React.Component {
 
 				{/* Uncomment the 2 TouchablOpacity lines once you add Andrea's timeline screen */}
 				{/* <TouchableOpacity onPress={() => navigation.navigate("AndreaScreen")}> */}
+								<TouchableOpacity style={{flex: 1,}} onPress={() => this.props.navigation.navigate("OtherProfile")}>
 				<SafeAreaView style={styles.container}>
 					<ScrollView showsVerticalScrollIndicator={false}>
 						<SafeAreaView style={[styles.nonTimelineSection]}>
@@ -263,6 +264,8 @@ export default class JobSearchScreen extends React.Component {
 						</SafeAreaView>
 					</ScrollView>
 				</SafeAreaView>
+
+												</TouchableOpacity>
 				{/* </TouchableOpacity> */}
 
 
