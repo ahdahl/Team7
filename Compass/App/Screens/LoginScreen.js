@@ -64,6 +64,7 @@ export default class LoginScreen extends React.Component {
         <KeyboardAvoidingView behavior={'padding'} style={styles.container}>
 
           <Image source={Images.logo} style={{ width:200, height: 200, marginBottom: 30}} />
+          
           <TextInput
             style={styles.input}
             value={this.state.signUpName}

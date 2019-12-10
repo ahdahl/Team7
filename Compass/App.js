@@ -13,10 +13,8 @@ export default class App extends React.Component {
     this.state = {
       debug: false,
 
-
       fontsLoaded: false,
-      // loggedIn: false,
-      loggedIn: true,
+      loggedIn: null,
       unsubscribe: null
     }
   }

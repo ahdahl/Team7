@@ -11,14 +11,18 @@ import {
 	ScrollView
 } from 'react-native';
 
+import firebase from 'firebase';
+
 import { Metrics, Colors, Images } from '../Themes';
 
 import { MaterialCommunityIcons, AntDesign, Octicons, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { Platform } from '@unimodules/core';
 
 export default class OtherProfile extends React.Component {
 
 	state = {
 		loading: false,
+		andreaImageURL: null,
 	}
 
 	static navigationOptions = {
@@ -32,7 +36,7 @@ export default class OtherProfile extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ margin: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: Platform.OS === 'ios' ? 16 : 0 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}
@@ -46,6 +50,13 @@ export default class OtherProfile extends React.Component {
 	//function to make simple alert
 	alert('Now connected with Andrea');
 }
+
+
+	componentDidMount() {
+		const users = firebase.storage().ref().child('Users');
+		const andreaImage = users.child('andreadahl@stanford.edu').child('ProfilePic').child('andrea-circle.png');
+		andreaImage.getDownloadURL().then((url) => { this.setState({ andreaImageURL: url }) }) ;
+	}
 
 
 	render() {
@@ -63,7 +74,7 @@ export default class OtherProfile extends React.Component {
 							</Text>
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
 								</Text>
-								<Image source={Images.AndreaProfilePic} style={{ width:70, height: 70}} />
+								<Image source={{uri: this.state.andreaImageURL}} style={{ width:70, height: 70}} />
 							</View>
 
 							<ScrollView horizontal={true} style={styles.statSection}>

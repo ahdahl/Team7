@@ -17,12 +17,14 @@ import firestore from '../../firebase';
 
 import { MaterialCommunityIcons, AntDesign, Octicons, MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { UserInterfaceIdiom } from 'expo-constants';
+import { Platform } from '@unimodules/core';
 
 
 export default class HomeScreen extends React.Component {
 
 	state = {
 		loading: false,
+		kimImageURL: null,
 	}
 
 	static navigationOptions = {
@@ -37,7 +39,8 @@ export default class HomeScreen extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: Platform.OS === 'ios' ? 16 : 0 }}>
+				{/* Note: Settings icon on this page is logout button for testing purposes */}
 				<TouchableOpacity onPress ={() => firebase.auth().signOut()}>
 					<Ionicons
 						name="ios-settings"
@@ -49,6 +52,12 @@ export default class HomeScreen extends React.Component {
 			</SafeAreaView>
 		),
 	};
+
+	componentDidMount() {
+		const users = firebase.storage().ref().child('Users');
+		const kimImage = users.child('kimanh@stanford.edu').child('ProfilePic').child('kim-circle.png');
+		kimImage.getDownloadURL().then((url) => { this.setState({ kimImageURL: url }) }) ;
+	  }
 
 
 	render() {
@@ -68,8 +77,10 @@ export default class HomeScreen extends React.Component {
 								<MaterialCommunityIcons name="menu-down" size={25} color="#FF727C" />
 								<Text style={{ fontFamily: 'lato-regular', fontSize: 15, color: Colors.salmon }}>{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}
 								</Text>
-								<Image source={Images.KimProfilePic} style={{ width:70, height: 70}} />
-							</View>
+								{/* <Image source={Images.KimProfilePic} style={{ width:70, height: 70}} /> */}
+								{console.log('kimImageURL: ' + this.state.kimImageURL)}
+								<Image source={{uri: this.state.kimImageURL}} style={{ width:70, height: 70}} />
+								</View>
 
 							<ScrollView horizontal={true} style={styles.statSection}>
 								<View style={styles.count}>

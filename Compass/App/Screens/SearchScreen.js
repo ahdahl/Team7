@@ -16,6 +16,7 @@ import { SearchBar } from 'react-native-elements'
 import { MaterialCommunityIcons, Octicons, Ionicons, Feather, AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
 import { bold, underline } from 'ansi-colors';
+import { Platform } from '@unimodules/core';
 
 
 const DATA = [
@@ -59,7 +60,7 @@ export default class SearchScreen extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: Platform.OS === 'ios' ? 16 : 0 }}>
 				<Ionicons
 					name='ios-settings'
 					size={42}

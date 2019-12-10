@@ -13,6 +13,8 @@ import { Metrics, Colors, Images } from '../Themes';
 
 import { SearchBar } from 'react-native-elements'
 import { Ionicons } from '@expo/vector-icons';
+import { Platform } from '@unimodules/core';
+
 
 export default class MailScreen extends React.Component {
 
@@ -32,7 +34,7 @@ export default class MailScreen extends React.Component {
 		},
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: Platform.OS === 'ios' ? 16 : 0 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}
@@ -48,31 +50,47 @@ export default class MailScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<View style={styles.messageContainer}>
-				<TouchableOpacity onPress={() => this.props.navigation.navigate("OtherProfile")}>
-					<View style={styles.contactContainer,{  flexDirection: "row", }}>
+					<TouchableOpacity>
+						<View style={styles.contactContainer,{  flexDirection: "row", }}>
 
-						<Image source={Images.AndreaProfilePic} style={styles.contactImage} />
-						<View style={styles.TextContainer}>
-							<Text style={styles.contactName}>Andrea Dahl</Text>
-							<Text style={styles.messagePreview}>That's really cool! I'd love to hear more :) </Text>
-						</View>
+							<TouchableOpacity onPress={() => this.props.navigation.navigate("OtherProfile")}>
+								<Image source={Images.AndreaProfilePic} style={styles.contactImage} />
+							</TouchableOpacity>
 
-					</View>
-						</TouchableOpacity>
-					<View style={styles.contactContainer,{  flexDirection: "row", }}>
-						<Image source={Images.DonovanProfilePic} style={styles.contactImage} />
-						<View style={styles.TextContainer}>
-							<Text style={styles.contactName}>Donovan Tokuyama</Text>
-							<Text style={styles.messagePreview}>Have you considered community college? It can be much more afforadable than...</Text>
+							<View style={styles.TextContainer}>
+								<Text style={styles.contactName}>Andrea Dahl</Text>
+								<Text style={styles.messagePreview}>That's really cool! I'd love to hear more :) </Text>
+							</View>
+
 						</View>
-					</View>
-					<View style={styles.contactContainer,{  flexDirection: "row", }}>
-						<Image source={Images.TyProfilePic} style={styles.contactImage} />
-						<View style={styles.TextContainer}>
-							<Text style={styles.contactName}>Ty Hunter</Text>
-							<Text style={styles.messagePreview}>I heard there's a career fair coming up in our area, do you think you'll go? </Text>
+					</TouchableOpacity>
+
+					<TouchableOpacity>
+						<View style={styles.contactContainer,{  flexDirection: "row", }}>
+							<TouchableOpacity>
+								<Image source={Images.DonovanProfilePic} style={styles.contactImage} />
+							</TouchableOpacity>
+
+							<View style={styles.TextContainer}>
+								<Text style={styles.contactName}>Donovan Tokuyama</Text>
+								<Text style={styles.messagePreview}>Have you considered community college? It can be much more afforadable than...</Text>
+							</View>
 						</View>
-					</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity>
+						<View style={styles.contactContainer,{  flexDirection: "row", }}>
+							<TouchableOpacity>
+								<Image source={Images.TyProfilePic} style={styles.contactImage} />
+							</TouchableOpacity>
+	
+							<View style={styles.TextContainer}>
+								<Text style={styles.contactName}>Ty Hunter</Text>
+								<Text style={styles.messagePreview}>I heard there's a career fair coming up in our area, do you think you'll go? </Text>
+							</View>
+						</View>
+					</TouchableOpacity>
+
 				</View>
 			</SafeAreaView>
 		)

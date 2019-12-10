@@ -9,14 +9,22 @@ import {
 	TouchableOpacity
 } from 'react-native';
 
+import firebase from 'firebase';
+
 import { Metrics, Colors, Images } from '../Themes';
 
 import { Ionicons } from '@expo/vector-icons';
+import { Platform } from '@unimodules/core';
+
 
 export default class CommunityScreen extends React.Component {
 
 	state = {
 		loading: false,
+		tyImageURL: null,
+		donovanImageURL: null,
+		andreaImageURL: null,
+		kimImageURL: null,
 	}
 
 	DATA = [
@@ -45,7 +53,7 @@ export default class CommunityScreen extends React.Component {
         },
 		headerTintColor: Colors.white,
 		headerRight: (
-			<SafeAreaView style={{ padding: 16, marginRight: 16 }}>
+			<SafeAreaView style={{ padding: 16, marginRight: Platform.OS === 'ios' ? 16 : 0 }}>
 				<Ionicons
 					name="ios-settings"
 					size={42}
@@ -54,6 +62,23 @@ export default class CommunityScreen extends React.Component {
 			</SafeAreaView>
 		),
 	};
+
+
+	componentDidMount() {
+		const users = firebase.storage().ref().child('Users');
+
+		const tyImage = users.child('tyhunter2015@gmail.com').child('ProfilePic').child('ty-circle.png');
+		tyImage.getDownloadURL().then((url) => { this.setState({ tyImageURL: url }) }) ;
+
+		const donovanImage = users.child('donovantokuyama@stanford.edu').child('ProfilePic').child('donovan-circle.png');
+		donovanImage.getDownloadURL().then((url) => { this.setState({ donovanImageURL: url }) }) ;
+
+		const andreaImage = users.child('andreadahl@stanford.edu').child('ProfilePic').child('andrea-circle.png');
+		andreaImage.getDownloadURL().then((url) => { this.setState({ andreaImageURL: url }) }) ;
+
+		const kimImage = users.child('kimanh@stanford.edu').child('ProfilePic').child('kim-circle.png');
+		kimImage.getDownloadURL().then((url) => { this.setState({ kimImageURL: url }) }) ;
+	}
 
 
 
@@ -74,38 +99,38 @@ export default class CommunityScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<View style = {styles.topHalfContainer}>
-				<Text style={{flex:1, fontSize: 14,fontStyle: 'italic', fontFamily: 'lato-italic', color: Colors.blue, alignSelf: 'center'}}>Your Connections</Text>
+				<Text style={{flex: 1, fontSize: 14,fontStyle: 'italic', fontFamily: 'lato-italic', color: Colors.blue, alignSelf: 'center'}}>Your Connections</Text>
 					<View style = {{flex: 2, flexDirection: 'row', justifyContent: 'space-evenly', paddingRight:40}}>
 						<View style={{flex: 1}}>
 							<Image
-								source={Images.TyProfilePic}
+								source={{uri: this.state.tyImageURL}}
 								style = {styles.rowProfilePicStyle}
 							/>
 						</View>
 						<View style={{flex: 1}}>
 							<Image
-							source={Images.DonovanProfilePic}
-							style = {styles.rowProfilePicStyle}
+								source={{uri: this.state.donovanImageURL}}
+								style = {styles.rowProfilePicStyle}
 							/>
 						</View>
 						<View style={{flex: 1}}>
 						<TouchableOpacity style={{flex: 1,}} onPress={() => this.props.navigation.navigate("OtherProfile")}>
 							<Image
-							source={Images.AndreaProfilePic}
-							style = {styles.rowProfilePicStyle}
+								source={{uri: this.state.andreaImageURL}}
+								style = {styles.rowProfilePicStyle}
 							/>
 						</TouchableOpacity>
 						</View>
 						<View style={{flex: 1}}>
 							<Image
-								source={Images.KimProfilePic}
+								source={{uri: this.state.kimImageURL}}
 								style = {styles.rowProfilePicStyle}
 							/>
 						</View>
 
 					</View>
 
-					<View style = {{flex: 3, paddignTop: 10}}>
+					<View style = {{flex: 3}}>
 						<Text style={styles.notificationsHeaderText}>Notifications</Text>
 					</View>
 				</View>
@@ -122,14 +147,14 @@ export default class CommunityScreen extends React.Component {
 						<View style={{flex: .4}}>
 
 							<Image
-								source={Images.TyProfilePic}
+								source={{uri: this.state.tyImageURL}}
 								style = {styles.profilePicStyle}
 							/>
 						</View>
 					</View>
 
 					<View style={{flex: 1, justifyContent: 'flex-start'}}>
-						<View style={{flex: 0.3, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
+						<View style={{flex: Platform.OS === 'ios' ? 0.3: 0.7, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
 							<Text style={{color: Colors.blue}}>09:24 PM</Text>
 						</View>
@@ -170,14 +195,14 @@ export default class CommunityScreen extends React.Component {
 						<View style={{flex: .4}}>
 
 							<Image
-								source={Images.TyProfilePic}
+								source={{uri: this.state.tyImageURL}}
 								style = {styles.profilePicStyle}
 							/>
 						</View>
 					</View>
 
 					<View style={{flex: 1, justifyContent: 'flex-start'}}>
-						<View style={{flex: 0.3, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
+						<View style={{flex: Platform.OS === 'ios' ? 0.3: 0.7, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4}}>
 							<Text style={{fontWeight: 'bold'}}>Ty Hunter</Text>
 							<Text style={{color: Colors.blue}}>09:24 PM</Text>
 						</View>
@@ -221,7 +246,7 @@ const styles = StyleSheet.create({
 		fontFamily: Metrics.defaultFont,
 		color: Colors.blue,
 		alignSelf: 'center',
-		paddingTop: 36,
+		paddingTop: Platform.OS === 'ios' ? 36: 24,
 	},
 	notificationsContainer: {
 		flex: 1,
